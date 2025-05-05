@@ -1,0 +1,28 @@
+package net.everwildForge.talesofalbion.item;
+
+import net.everwildForge.talesofalbion.TalesofAlbion;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModItems {
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, TalesofAlbion.MOD_ID);
+
+    //C'est ici que les nouveau items doivent etre mis
+    //Pour l'exemple ici l'item a ajouter dans le jeu sera "test"
+    //-------------------Exemple----------------------------
+    //public static final RegistryObject<Item> TEST = ITEMS.register("test", () -> new Item(new Item.Properties()));
+    //------------------------------------------------------
+    //Mettre les nouveaux blocs en dessous
+
+
+
+    public static void register(IEventBus eventBus)
+    {
+        ITEMS.register(eventBus);
+    }
+
+}
