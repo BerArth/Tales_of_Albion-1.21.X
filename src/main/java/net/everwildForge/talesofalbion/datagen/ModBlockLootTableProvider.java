@@ -26,6 +26,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         //c'est dans cette méthode que nous générons les loot que les différents blocks droprons
+        dropSelf(ModBlocks.SILVER_BLOCK.get());
     }
 
     //cette méthode comme dit dans la vidéo sert a faire des loot avec plusieur items drop (par exemple en vanila le charbon ou le cooper)

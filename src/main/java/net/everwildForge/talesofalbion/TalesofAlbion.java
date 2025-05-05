@@ -56,6 +56,10 @@ public class TalesofAlbion
        /* if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.TEST);
         }*/
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.SILVER_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
