@@ -3,7 +3,6 @@ package net.everwildForge.talesofalbion;
 import com.mojang.logging.LogUtils;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -55,10 +54,16 @@ public class TalesofAlbion
         //ici on ajoute l'item dans le l'inventaire créatif(ici dans la section ingredient)
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.SILVER_INGOT);
+            event.accept(ModItems.RAW_SILVER);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SILVER_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.SILVER_ORE);
+            event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
         }
     }
 

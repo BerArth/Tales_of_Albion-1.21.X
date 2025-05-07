@@ -1,6 +1,9 @@
 {
 
   "item.talesofalbion.silver_ingot": "Silver Ingot",
+  "item.talesofalbion.raw_silver": "Raw Silver",
 
-  "block.talesofalbion.silver_block": "Block of Silver"
+  "block.talesofalbion.silver_block": "Block of Silver",
+  "block.talesofalbion.silver_ore": "Silver Ore",
+  "block.talesofalbion.deepslate_silver_ore": "Deepslate Silver Ore"
 }

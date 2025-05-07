@@ -1,6 +1,7 @@
 package net.everwildForge.talesofalbion.datagen;
 
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -27,6 +28,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         //c'est dans cette méthode que nous générons les loot que les différents blocks droprons
         dropSelf(ModBlocks.SILVER_BLOCK.get());
+
+        this.add(ModBlocks.SILVER_ORE.get(),
+                block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
+
+        this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
     }
 
     //cette méthode comme dit dans la vidéo sert a faire des loot avec plusieur items drop (par exemple en vanila le charbon ou le cooper)

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "talesofalbion:silver_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "talesofalbion:silver_ingot"
+  }
+}

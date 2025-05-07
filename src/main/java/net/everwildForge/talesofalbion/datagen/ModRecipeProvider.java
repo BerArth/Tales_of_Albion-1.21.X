@@ -19,6 +19,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void m_245200_(RecipeOutput recipeOutput) {  //m_245200 = buildRecipes
+
+        List<ItemLike> SILVER_SMELTABLE = List.of(ModItems.RAW_SILVER.get(), ModBlocks.SILVER_ORE.get());
+        List<ItemLike> SILVER_BLASTABLE = List.of(ModItems.RAW_SILVER.get(),  ModBlocks.SILVER_ORE.get(), ModBlocks.DEEPSLATE_SILVER_ORE.get());
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -29,6 +33,9 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 9)
                 .requires(ModBlocks.SILVER_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.SILVER_BLOCK.get()), has(ModBlocks.SILVER_BLOCK.get())).save(recipeOutput);
+
+        oreSmelting(recipeOutput, SILVER_SMELTABLE, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.25f, 200, "silver");
+        oreBlasting(recipeOutput, SILVER_BLASTABLE, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.25f, 100, "silver");
     }
 
 
