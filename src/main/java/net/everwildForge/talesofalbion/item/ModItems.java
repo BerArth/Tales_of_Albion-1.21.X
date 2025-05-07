@@ -17,7 +17,7 @@ public class ModItems {
     //public static final RegistryObject<Item> TEST = ITEMS.register("test", () -> new Item(new Item.Properties()));
     //------------------------------------------------------
     //Mettre les nouveaux blocs en dessous
-
+    public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot", () -> new Item(new  Item.Properties()));
 
 
     public static void register(IEventBus eventBus)

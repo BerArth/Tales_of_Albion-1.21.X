@@ -53,9 +53,9 @@ public class TalesofAlbion
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         //ici on ajoute l'item dans le l'inventaire créatif(ici dans la section ingredient)
-       /* if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.TEST);
-        }*/
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.SILVER_INGOT);
+        }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SILVER_BLOCK);
