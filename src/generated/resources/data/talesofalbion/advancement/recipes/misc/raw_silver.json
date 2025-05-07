@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_silver_block": {
+    "has_raw_silver_block": {
       "conditions": {
         "items": [
           {
-            "items": "talesofalbion:silver_block"
+            "items": "talesofalbion:raw_silver_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "talesofalbion:silver_ingot"
+        "recipe": "talesofalbion:raw_silver"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_silver_block"
+      "has_raw_silver_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "talesofalbion:silver_ingot"
+      "talesofalbion:raw_silver"
     ]
   }
 }

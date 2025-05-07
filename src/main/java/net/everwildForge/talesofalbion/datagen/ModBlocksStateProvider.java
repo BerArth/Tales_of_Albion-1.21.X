@@ -18,6 +18,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
+        blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

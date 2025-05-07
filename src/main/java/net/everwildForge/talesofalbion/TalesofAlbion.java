@@ -2,6 +2,7 @@ package net.everwildForge.talesofalbion;
 
 import com.mojang.logging.LogUtils;
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.item.ModCreativeModeTabs;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -34,6 +35,8 @@ public class TalesofAlbion
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -55,6 +58,7 @@ public class TalesofAlbion
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.SILVER_INGOT);
             event.accept(ModItems.RAW_SILVER);
+            event.accept(ModItems.SILVER_NUGGET);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
@@ -64,6 +68,7 @@ public class TalesofAlbion
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.SILVER_ORE);
             event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
+            event.accept(ModBlocks.RAW_SILVER_BLOCK);
         }
     }
 
