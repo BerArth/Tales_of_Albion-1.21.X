@@ -19,6 +19,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     //tags = quelle outils utilisé pour le cassé/ si besoins d'un outils en fer, diams ...
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.DAUB_BLOCK.get());
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SILVER_BLOCK.get())
                 .add(ModBlocks.SILVER_ORE.get())

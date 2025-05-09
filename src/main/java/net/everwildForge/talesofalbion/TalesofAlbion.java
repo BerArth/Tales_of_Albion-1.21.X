@@ -63,6 +63,7 @@ public class TalesofAlbion
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SILVER_BLOCK);
+            event.accept(ModBlocks.DAUB_BLOCK);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){

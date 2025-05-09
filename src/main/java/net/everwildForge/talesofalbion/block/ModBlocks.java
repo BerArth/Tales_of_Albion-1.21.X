@@ -31,6 +31,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    
+    public static final RegistryObject<Block> DAUB_BLOCK = registerBlock("daub_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                .strength(3f).requiresCorrectToolForDrops().sound(SoundType.MUD)));
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of()
