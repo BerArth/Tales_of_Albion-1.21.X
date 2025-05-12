@@ -1,6 +1,8 @@
 package net.everwildForge.talesofalbion.item;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
+import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,6 +24,10 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> DAUB_BALL = ITEMS.register("daub_ball", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> HEATHER = ITEMS.register("heather",
+            () -> new BlockItem(ModBlocks.HEATHER.get(), new Item.Properties()));
+
 
     public static void register(IEventBus eventBus)
     {
