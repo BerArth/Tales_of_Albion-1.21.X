@@ -21,9 +21,14 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
         blockWithItem(ModBlocks.DAUB_BLOCK);
         blockWithItem(ModBlocks.THATCH_BLOCK);
+        simpleCrossBlock(ModBlocks.HEATHER.get(), "heather");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void simpleCrossBlock(Block block, String name) {
+        simpleBlock(block, models().cross(name, modLoc("block/" + name)));
     }
 }

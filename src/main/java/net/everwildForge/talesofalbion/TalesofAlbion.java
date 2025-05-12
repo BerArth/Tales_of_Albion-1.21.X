@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.item.ModCreativeModeTabs;
 import net.everwildForge.talesofalbion.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -71,6 +73,7 @@ public class TalesofAlbion
             event.accept(ModBlocks.SILVER_ORE);
             event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
             event.accept(ModBlocks.RAW_SILVER_BLOCK);
+            event.accept(ModItems.HEATHER);
         }
     }
 
@@ -88,7 +91,7 @@ public class TalesofAlbion
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HEATHER.get(), RenderType.cutout());
         }
     }
 }

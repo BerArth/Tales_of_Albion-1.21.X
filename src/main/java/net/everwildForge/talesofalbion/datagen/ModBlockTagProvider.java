@@ -37,5 +37,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SILVER_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SILVER_ORE.get())
                 .add(ModBlocks.RAW_SILVER_BLOCK.get());
+
+        tag(BlockTags.FLOWERS).add(ModBlocks.HEATHER.get());
+        tag(BlockTags.SMALL_FLOWERS).add(ModBlocks.HEATHER.get());
     }
 }

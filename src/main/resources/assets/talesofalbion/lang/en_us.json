@@ -9,7 +9,9 @@
   "block.talesofalbion.silver_ore": "Silver Ore",
   "block.talesofalbion.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.talesofalbion.raw_silver_block": "Raw Silver Block",
+
   "block.talesofalbion.thatch_block": "Block of Thatch",
+  "block.talesofalbion.heather": "Heather",
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",
   "creativetab.talesofalbion.silver_blocks" : "Silver Blocks"

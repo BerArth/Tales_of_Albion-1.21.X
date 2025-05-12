@@ -1,0 +1,7 @@
+// 1.21	2025-05-12T11:46:09.9041648	Tags for minecraft:block mod id talesofalbion
+fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/flowers.json
+488e2c00c8a747b31b4b36578b91afa422e5487d data/minecraft/tags/block/mineable/axe.json
+da54bba7c035eac861f68b8874d045a33d260126 data/minecraft/tags/block/mineable/pickaxe.json
+4aa6e9e86ebe37c6163e8068d37990a8cb3f4f9a data/minecraft/tags/block/mineable/shovel.json
+da54bba7c035eac861f68b8874d045a33d260126 data/minecraft/tags/block/needs_iron_tool.json
+fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/small_flowers.json
