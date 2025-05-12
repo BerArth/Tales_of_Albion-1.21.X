@@ -29,6 +29,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         //c'est dans cette méthode que nous générons les loot que les différents blocks droprons
         dropSelf(ModBlocks.SILVER_BLOCK.get());
         dropSelf(ModBlocks.DAUB_BLOCK.get());
+        dropSelf(ModBlocks.THATCH_BLOCK.get());
 
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));

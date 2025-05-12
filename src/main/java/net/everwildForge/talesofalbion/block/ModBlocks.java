@@ -40,6 +40,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> THATCH_BLOCK = registerBlock("thatch_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.2f).requiresCorrectToolForDrops().sound(SoundType.WOOL)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

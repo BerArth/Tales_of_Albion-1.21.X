@@ -20,6 +20,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
         blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
         blockWithItem(ModBlocks.DAUB_BLOCK);
+        blockWithItem(ModBlocks.THATCH_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
