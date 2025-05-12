@@ -3,15 +3,15 @@
   "item.talesofalbion.silver_ingot": "Silver Ingot",
   "item.talesofalbion.raw_silver": "Raw Silver",
   "item.talesofalbion.silver_nugget": "Silver Nugget",
+  "item.talesofalbion.daub_ball": "Daub Ball",
 
 
   "block.talesofalbion.silver_block": "Block of Silver",
   "block.talesofalbion.silver_ore": "Silver Ore",
   "block.talesofalbion.deepslate_silver_ore": "Deepslate Silver Ore",
-  "block.talesofalbion.raw_silver_block": "Raw Silver Block",
-
+  "block.talesofalbion.raw_silver_block": "Block of Raw Silver ",
   "block.talesofalbion.thatch_block": "Block of Thatch",
-  "block.talesofalbion.heather": "Heather",
+  "block.talesofalbion.daub_block": "Block of Daub",
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",
   "creativetab.talesofalbion.silver_blocks" : "Silver Blocks"
