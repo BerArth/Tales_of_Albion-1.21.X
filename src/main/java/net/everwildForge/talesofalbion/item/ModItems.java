@@ -28,6 +28,8 @@ public class ModItems {
     public static final RegistryObject<Item> HEATHER = ITEMS.register("heather",
             () -> new BlockItem(ModBlocks.HEATHER.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> CHALK_POWDER = ITEMS.register("chalk_powder", () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus)
     {

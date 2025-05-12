@@ -1,7 +1,8 @@
-// 1.21	2025-05-12T14:19:54.7446905	Loot Tables
+// 1.21	2025-05-12T14:39:44.4223458	Loot Tables
 3d57197e6bec8d7657ec9d1cf8353b77aa9ea6da data/talesofalbion/loot_table/blocks/chalk_block.json
 cc547e383f8cdefee21515f0736fd4180ee33637 data/talesofalbion/loot_table/blocks/daub_block.json
 f2daa2e5bcca00a067984ca651c7c1c3c2c3f53a data/talesofalbion/loot_table/blocks/deepslate_silver_ore.json
+11dfe06611bf190e0eab739ec599d73a38371995 data/talesofalbion/loot_table/blocks/heather.json
 6760f2b66ed8911a38daa6508a21bb21edef4103 data/talesofalbion/loot_table/blocks/raw_silver_block.json
 f0310054180e818d04c5998495dd6cf7cc6f2e9c data/talesofalbion/loot_table/blocks/silver_block.json
 505340db71f131f39101e6b338696e07e21ab6e7 data/talesofalbion/loot_table/blocks/silver_ore.json

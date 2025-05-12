@@ -19,5 +19,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_SILVER.get());
         basicItem(ModItems.SILVER_NUGGET.get());
         basicItem(ModItems.DAUB_BALL.get());
+        basicItem(ModItems.CHALK_POWDER.get());
     }
 }

@@ -1,7 +1,8 @@
-// 1.21	2025-05-12T14:19:54.7416884	Block States: talesofalbion
+// 1.21	2025-05-12T14:39:44.4203465	Block States: talesofalbion
 8d184b2d8fe3a83031578b6543c25f157198c25e assets/talesofalbion/blockstates/chalk_block.json
 d203e4099998699d83176c5db06f504368ab7096 assets/talesofalbion/blockstates/daub_block.json
 c1805f10db84be4f0b2fba2a86e093602240cbf1 assets/talesofalbion/blockstates/deepslate_silver_ore.json
+76752fb33e039ba4732622b939eddb41528695b0 assets/talesofalbion/blockstates/heather.json
 18e6f16ab73293b84e1a2a52ab3c0e0076b58831 assets/talesofalbion/blockstates/raw_silver_block.json
 ddfe95698bf8436d61ea8af433fd3cae38b2ed1f assets/talesofalbion/blockstates/silver_block.json
 1ab6726d8c9f15f395e94d34199610ac34b5d37e assets/talesofalbion/blockstates/silver_ore.json
@@ -9,6 +10,7 @@ b8157ea0f9f44b66a4c29e2eb5c57623b52905cc assets/talesofalbion/blockstates/thatch
 5dd8492bd40b634b2b29733c288997000318374b assets/talesofalbion/models/block/chalk_block.json
 baa53fc8fff7ec4208183d3fb0800ffeaee8d634 assets/talesofalbion/models/block/daub_block.json
 3bdf8660307ab8caeaec57a0aaf69059b4f7bc72 assets/talesofalbion/models/block/deepslate_silver_ore.json
+37a1f185c2dbe57500d2a46d2c9eb620c5b08e03 assets/talesofalbion/models/block/heather.json
 83172ce46c1765739803e791f34711d3ca9a82a5 assets/talesofalbion/models/block/raw_silver_block.json
 86d6fbfdef8156af9dffb5ed863cbaf37944642e assets/talesofalbion/models/block/silver_block.json
 7e8c7a31e103ffa1e4b426efa14bbe36cbc127d3 assets/talesofalbion/models/block/silver_ore.json

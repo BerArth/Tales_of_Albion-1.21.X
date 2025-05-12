@@ -6,6 +6,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocksStateProvider extends BlockStateProvider {
@@ -22,6 +24,8 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DAUB_BLOCK);
         blockWithItem(ModBlocks.THATCH_BLOCK);
         simpleCrossBlock(ModBlocks.HEATHER.get(), "heather");
+
+        blockWithItem(ModBlocks.CHALK_BLOCK, "chalk_bottom", "chalk_top", "chalk");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -31,4 +35,21 @@ public class ModBlocksStateProvider extends BlockStateProvider {
     private void simpleCrossBlock(Block block, String name) {
         simpleBlock(block, models().cross(name, modLoc("block/" + name)));
     }
+
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject, String bottom, String top, String side) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().cubeBottomTop(
+                        name(blockRegistryObject.get()),
+                        modLoc("block/" + side),
+                        modLoc("block/" + bottom),
+                        modLoc("block/" + top)
+                )
+        );
+    }
+
+    private String name(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block).getPath();
+    }
+
+
 }

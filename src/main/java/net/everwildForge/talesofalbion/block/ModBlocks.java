@@ -49,9 +49,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.2f).requiresCorrectToolForDrops().sound(SoundType.WOOL)));
 
+    public static final RegistryObject<Block> CHALK_BLOCK = registerBlock("chalk_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.5f).sound(SoundType.BASALT)));
+
     public static final RegistryObject<Block> HEATHER = BLOCKS.register("heather",
             ()-> new FlowerBlock(MobEffects.LUCK, 5, Block.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
-
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

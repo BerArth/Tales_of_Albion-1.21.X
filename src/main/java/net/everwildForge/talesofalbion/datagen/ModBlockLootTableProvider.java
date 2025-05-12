@@ -39,6 +39,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
 
         dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
+
+        this.add(ModBlocks.CHALK_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.CHALK_BLOCK.get(), ModItems.CHALK_POWDER.get(), 3, 5));
     }
 
     //cette méthode comme dit dans la vidéo sert a faire des loot avec plusieur items drop (par exemple en vanila le charbon ou le cooper)

@@ -1,8 +1,7 @@
 {
   "variants": {
-    "": [
-    { "model": "talesofalbion:block/heather" },
-      { "model": "talesofalbion:block/heather_variant" }
-      ]
+    "": {
+      "model": "talesofalbion:block/heather"
+    }
   }
 }
