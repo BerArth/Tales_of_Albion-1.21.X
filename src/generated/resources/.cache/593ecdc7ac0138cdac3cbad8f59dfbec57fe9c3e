@@ -1,5 +1,6 @@
-// 1.21	2025-05-13T11:31:53.647763	Tags for minecraft:block mod id talesofalbion
+// 1.21	2025-05-13T15:06:16.0105575	Tags for minecraft:block mod id talesofalbion
 fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/flowers.json
+2bf869b68e55c1610c00208047dd6bfec328c498 data/minecraft/tags/block/logs_that_burn.json
 488e2c00c8a747b31b4b36578b91afa422e5487d data/minecraft/tags/block/mineable/axe.json
 907c2e4d8f6115d16f0b95c3d4b7437e3afc440f data/minecraft/tags/block/mineable/pickaxe.json
 4aa6e9e86ebe37c6163e8068d37990a8cb3f4f9a data/minecraft/tags/block/mineable/shovel.json

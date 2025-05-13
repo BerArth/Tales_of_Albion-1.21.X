@@ -1,9 +1,12 @@
 package net.everwildForge.talesofalbion.datagen;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
+import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -18,5 +21,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
 
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ALDER_LOG.get().asItem())
+                .add(ModBlocks.ALDER_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_ALDER_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_ALDER_WOOD.get().asItem());
+
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.ALDER_PLANKS.get().asItem());
     }
 }

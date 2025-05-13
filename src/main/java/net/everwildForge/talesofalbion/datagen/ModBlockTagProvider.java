@@ -42,5 +42,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FLOWERS).add(ModBlocks.HEATHER.get());
         tag(BlockTags.SMALL_FLOWERS).add(ModBlocks.HEATHER.get());
+
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ALDER_LOG.get())
+                .add(ModBlocks.ALDER_WOOD.get())
+                .add(ModBlocks.STRIPPED_ALDER_LOG.get())
+                .add(ModBlocks.STRIPPED_ALDER_WOOD.get());
     }
 }

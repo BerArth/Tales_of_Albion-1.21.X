@@ -45,6 +45,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.CHALK_STONE.get());
         dropSelf(ModBlocks.CHALK_STONE_BRICKS.get());
+
+        this.dropSelf(ModBlocks.ALDER_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_ALDER_LOG.get());
+        this.dropSelf(ModBlocks.ALDER_PLANKS.get());
+        this.dropSelf(ModBlocks.ALDER_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_ALDER_WOOD.get());
+        this.dropSelf(ModBlocks.ALDER_SAPLING.get());
+
+        this.add(ModBlocks.ALDER_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.ALDER_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
     }
 
     //cette méthode comme dit dans la vidéo sert a faire des loot avec plusieur items drop (par exemple en vanila le charbon ou le cooper)

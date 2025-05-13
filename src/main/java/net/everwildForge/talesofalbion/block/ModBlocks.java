@@ -1,16 +1,19 @@
 package net.everwildForge.talesofalbion.block;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
+import net.everwildForge.talesofalbion.block.custom.ModFlammableRotatedPillarBlock;
 import net.everwildForge.talesofalbion.item.ModItems;
+import net.everwildForge.talesofalbion.worldgen.tree.ModTreeGrowers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -63,6 +66,34 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHALK_STONE_BRICKS = registerBlock("chalk_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
+    public static final RegistryObject<RotatedPillarBlock> ALDER_LOG = registerBlock("alder_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock> ALDER_WOOD = registerBlock("alder_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ALDER_LOG = registerBlock("stripped_alder_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ALDER_WOOD = registerBlock("stripped_alder_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> ALDER_PLANKS = registerBlock("alder_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            });
+
+    public static final RegistryObject<Block> ALDER_LEAVES = registerBlock("alder_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> ALDER_SAPLING = registerBlock("alder_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.ALDER,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

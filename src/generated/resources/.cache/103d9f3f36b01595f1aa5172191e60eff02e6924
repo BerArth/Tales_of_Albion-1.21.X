@@ -1,4 +1,5 @@
-// 1.21	2025-05-12T13:37:32.0121945	Registries
+// 1.21	2025-05-13T15:06:16.0125578	Registries
 9e4ad7f83bd040342221a0d2cfdc85db282001b1 data/talesofalbion/forge/biome_modifier/add_silver_ore.json
+83a89bdd610dd688cc2d6e7677fcf96d2816a07e data/talesofalbion/worldgen/configured_feature/alder.json
 65b8166f99558c56bb9004fe5dce0d5ef357f26c data/talesofalbion/worldgen/configured_feature/silver_ore.json
 c222119027991010c6ba2303f085880ac3b52613 data/talesofalbion/worldgen/placed_feature/silver_ore_placed.json

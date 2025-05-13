@@ -17,6 +17,14 @@
   "block.talesofalbion.chalk_block": "Block of Chalk",
   "block.talesofalbion.chalk_stone": "Chalk Stone",
   "block.talesofalbion.chalk_stone_bricks": "Chalk Stone Bricks",
+  "block.talesofalbion.alder_log": "Alder Log",
+  "block.talesofalbion.alder_wood": "Alder Wood",
+  "block.talesofalbion.stripped_alder_log": "Stripped Alder Log",
+  "block.talesofalbion.stripped_alder_wood": "Stripped Alder Wood",
+  "block.talesofalbion.alder_planks": "Alder Planks",
+  "block.talesofalbion.alder_leaves": "Alder Leaves",
+  "block.talesofalbion.alder_sapling": "Alder Sapling",
+
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",
   "creativetab.talesofalbion.silver_blocks" : "Silver Blocks"
