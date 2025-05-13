@@ -64,6 +64,20 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHALK_STONE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.CHALK_POWDER.get())
+                .unlockedBy(getHasName(ModItems.CHALK_POWDER.get()), has(ModItems.CHALK_POWDER.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHALK_STONE_BRICKS.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.CHALK_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.CHALK_STONE.get()), has(ModBlocks.CHALK_STONE.get())).save(recipeOutput);
+
+
     }
 
 

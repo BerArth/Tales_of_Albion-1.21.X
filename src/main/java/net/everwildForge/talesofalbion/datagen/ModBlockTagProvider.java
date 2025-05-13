@@ -26,7 +26,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SILVER_BLOCK.get())
                 .add(ModBlocks.SILVER_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SILVER_ORE.get())
-                .add(ModBlocks.RAW_SILVER_BLOCK.get());
+                .add(ModBlocks.RAW_SILVER_BLOCK.get())
+                .add(ModBlocks.CHALK_STONE.get())
+                .add(ModBlocks.CHALK_STONE_BRICKS.get());
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.THATCH_BLOCK.get());

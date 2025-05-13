@@ -1,5 +1,7 @@
-// 1.21	2025-05-12T14:39:44.4203465	Block States: talesofalbion
+// 1.21	2025-05-13T11:31:53.6467656	Block States: talesofalbion
 8d184b2d8fe3a83031578b6543c25f157198c25e assets/talesofalbion/blockstates/chalk_block.json
+f5d86f9042a6dfe42239fb6ab00630122335d556 assets/talesofalbion/blockstates/chalk_stone.json
+a1299fa7aaf9d4d0c9a9bd64efc90e4f79736cb9 assets/talesofalbion/blockstates/chalk_stone_bricks.json
 d203e4099998699d83176c5db06f504368ab7096 assets/talesofalbion/blockstates/daub_block.json
 c1805f10db84be4f0b2fba2a86e093602240cbf1 assets/talesofalbion/blockstates/deepslate_silver_ore.json
 76752fb33e039ba4732622b939eddb41528695b0 assets/talesofalbion/blockstates/heather.json
@@ -8,6 +10,8 @@ ddfe95698bf8436d61ea8af433fd3cae38b2ed1f assets/talesofalbion/blockstates/silver
 1ab6726d8c9f15f395e94d34199610ac34b5d37e assets/talesofalbion/blockstates/silver_ore.json
 b8157ea0f9f44b66a4c29e2eb5c57623b52905cc assets/talesofalbion/blockstates/thatch_block.json
 5dd8492bd40b634b2b29733c288997000318374b assets/talesofalbion/models/block/chalk_block.json
+5cd2899cb6cbac534b79a3635dc373651c9dc9bb assets/talesofalbion/models/block/chalk_stone.json
+d05689c7f292a40665f69fd4d70ff508a212494c assets/talesofalbion/models/block/chalk_stone_bricks.json
 baa53fc8fff7ec4208183d3fb0800ffeaee8d634 assets/talesofalbion/models/block/daub_block.json
 3bdf8660307ab8caeaec57a0aaf69059b4f7bc72 assets/talesofalbion/models/block/deepslate_silver_ore.json
 37a1f185c2dbe57500d2a46d2c9eb620c5b08e03 assets/talesofalbion/models/block/heather.json
@@ -16,6 +20,8 @@ baa53fc8fff7ec4208183d3fb0800ffeaee8d634 assets/talesofalbion/models/block/daub_
 7e8c7a31e103ffa1e4b426efa14bbe36cbc127d3 assets/talesofalbion/models/block/silver_ore.json
 a1d67b452f03562d97b29db1ba3bdbb641bc561d assets/talesofalbion/models/block/thatch_block.json
 7ac855f9c953196faf80d199c4df9c2b2d37c751 assets/talesofalbion/models/item/chalk_block.json
+3ac2bc31a951ab7d645b83c0a2662e6cde3520cb assets/talesofalbion/models/item/chalk_stone.json
+45d3d885547348f0545564be9384c2b595df6f21 assets/talesofalbion/models/item/chalk_stone_bricks.json
 af0c19e0d0d8ca3293a999080af29dca8460bc67 assets/talesofalbion/models/item/daub_block.json
 c9e841756e64992e1682f09d08e7d6319da5a312 assets/talesofalbion/models/item/deepslate_silver_ore.json
 d38f59363d1b3d60fcb20856a07d97d9a3fef1ce assets/talesofalbion/models/item/raw_silver_block.json

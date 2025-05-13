@@ -26,6 +26,8 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         simpleCrossBlock(ModBlocks.HEATHER.get(), "heather");
 
         blockWithItem(ModBlocks.CHALK_BLOCK, "chalk_bottom", "chalk_top", "chalk");
+        blockWithItem(ModBlocks.CHALK_STONE);
+        blockWithItem(ModBlocks.CHALK_STONE_BRICKS, "chalk_stone_bricks_bottom", "chalk_stone_bricks_top", "chalk_stone_bricks");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
