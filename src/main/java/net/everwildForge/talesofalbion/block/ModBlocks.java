@@ -40,7 +40,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     
-    public static final RegistryObject<Block> DAUB_BLOCK = registerBlock("daub_block",
+    public static final RegistryObject<Block> WATTLE_N_DAUB_PLAIN = registerBlock("wattle_n_daub_plain",
             () -> new Block(BlockBehaviour.Properties.of()
                 .strength(3f).requiresCorrectToolForDrops().sound(SoundType.MUD)));
 

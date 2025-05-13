@@ -20,7 +20,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.DAUB_BLOCK.get());
+                .add(ModBlocks.WATTLE_N_DAUB_PLAIN.get());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SILVER_BLOCK.get())

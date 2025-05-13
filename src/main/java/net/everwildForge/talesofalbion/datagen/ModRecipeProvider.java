@@ -77,7 +77,12 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', ModBlocks.CHALK_STONE.get())
                 .unlockedBy(getHasName(ModBlocks.CHALK_STONE.get()), has(ModBlocks.CHALK_STONE.get())).save(recipeOutput);
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WATTLE_N_DAUB_PLAIN.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.DAUB_BALL.get())
+                .unlockedBy(getHasName(ModItems.DAUB_BALL.get()), has(ModItems.DAUB_BALL.get())).save(recipeOutput);
     }
 
 
