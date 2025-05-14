@@ -86,7 +86,7 @@ public class ModBlocks {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return 5;}
             });
-    public static final RegistryObject<Block> BEECH_SAPLING = registerBlock("alder_sapling",
+    public static final RegistryObject<Block> BEECH_SAPLING = registerBlock("beech_sapling",
             () -> new SaplingBlock(ModTreeGrowers.BEECH,BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
