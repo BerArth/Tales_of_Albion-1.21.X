@@ -46,6 +46,9 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.ALDER_LEAVES);
         saplingBlock(ModBlocks.ALDER_SAPLING);
 
+        stairsBlock(ModBlocks.ALDER_STAIRS.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()));
+        blockItem(ModBlocks.ALDER_STAIRS);
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

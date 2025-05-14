@@ -67,7 +67,7 @@ public class TalesofAlbion
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SILVER_BLOCK);
-            event.accept(ModBlocks.DAUB_BLOCK);
+            event.accept(ModBlocks.WATTLE_N_DAUB_PLAIN);
             event.accept(ModBlocks.THATCH_BLOCK);
             event.accept(ModBlocks.CHALK_STONE);
             event.accept(ModBlocks.CHALK_STONE_BRICKS);
@@ -76,6 +76,8 @@ public class TalesofAlbion
             event.accept(ModBlocks.STRIPPED_ALDER_LOG);
             event.accept(ModBlocks.ALDER_LOG);
             event.accept(ModBlocks.ALDER_PLANKS);
+            event.accept(ModBlocks.ALDER_STAIRS);
+
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){

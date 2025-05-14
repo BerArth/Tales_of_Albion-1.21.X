@@ -2,6 +2,7 @@ package net.everwildForge.talesofalbion.datagen;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -31,8 +32,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHALK_STONE_BRICKS.get());
 
         tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.THATCH_BLOCK.get());
-
+                .add(ModBlocks.THATCH_BLOCK.get())
+                .addTag(ModTags.Blocks.ALDER_BLOCKS);
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SILVER_BLOCK.get())
@@ -48,5 +49,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALDER_WOOD.get())
                 .add(ModBlocks.STRIPPED_ALDER_LOG.get())
                 .add(ModBlocks.STRIPPED_ALDER_WOOD.get());
+
+        tag(ModTags.Blocks.ALDER_BLOCKS)
+                .add(
+                        ModBlocks.ALDER_LOG.get(),
+                        ModBlocks.ALDER_WOOD.get(),
+                        ModBlocks.STRIPPED_ALDER_LOG.get(),
+                        ModBlocks.STRIPPED_ALDER_WOOD.get(),
+                        ModBlocks.ALDER_STAIRS.get()
+
+                );
     }
 }

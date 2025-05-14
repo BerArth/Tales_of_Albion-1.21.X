@@ -1,13 +1,13 @@
-// 1.21	2025-05-13T15:06:16.0115586	Loot Tables
+// 1.21	2025-05-14T11:42:29.4456587	Loot Tables
 0fa1d2386b28efd67047107bbd873b5c4fc9757e data/talesofalbion/loot_table/blocks/alder_leaves.json
 12730755a949bad2a426da6ebe442e862c553015 data/talesofalbion/loot_table/blocks/alder_log.json
 49ad7d5b256688dece152ac7ea59de041cb7673f data/talesofalbion/loot_table/blocks/alder_planks.json
 ace01791faadb7e9e852f8cb3c7793252e9e4507 data/talesofalbion/loot_table/blocks/alder_sapling.json
+c9d361bd209cb6478d8b9c4517ccbd2b4d430e8b data/talesofalbion/loot_table/blocks/alder_stairs.json
 ced88aad9ec94e7e7476e6132b39620c38fc7143 data/talesofalbion/loot_table/blocks/alder_wood.json
 3d57197e6bec8d7657ec9d1cf8353b77aa9ea6da data/talesofalbion/loot_table/blocks/chalk_block.json
 039e8949b5ecb30e63aa60110e9a52ef8667d499 data/talesofalbion/loot_table/blocks/chalk_stone.json
 93b9ce234f994bb554b24669bd83a970d09e06d8 data/talesofalbion/loot_table/blocks/chalk_stone_bricks.json
-cc547e383f8cdefee21515f0736fd4180ee33637 data/talesofalbion/loot_table/blocks/daub_block.json
 f2daa2e5bcca00a067984ca651c7c1c3c2c3f53a data/talesofalbion/loot_table/blocks/deepslate_silver_ore.json
 11dfe06611bf190e0eab739ec599d73a38371995 data/talesofalbion/loot_table/blocks/heather.json
 6760f2b66ed8911a38daa6508a21bb21edef4103 data/talesofalbion/loot_table/blocks/raw_silver_block.json
@@ -16,3 +16,4 @@ f0310054180e818d04c5998495dd6cf7cc6f2e9c data/talesofalbion/loot_table/blocks/si
 228871f01ba747403379577e1c7825d94a8bd210 data/talesofalbion/loot_table/blocks/stripped_alder_log.json
 389002fbb72f9f15d6be77b49ff2a49c4671f851 data/talesofalbion/loot_table/blocks/stripped_alder_wood.json
 b82081cf125004cdce9cf348eccb67f9e8c46907 data/talesofalbion/loot_table/blocks/thatch_block.json
+5b54c5582f6cc21e1640bb5f858dbfe9ccdd3456 data/talesofalbion/loot_table/blocks/wattle_n_daub_plain.json

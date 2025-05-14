@@ -120,6 +120,10 @@ public class ModBlocks {
             () -> new SaplingBlock(ModTreeGrowers.ALDER,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
+    public static final RegistryObject<StairBlock> ALDER_STAIRS = registerBlock("alder_stairs",
+            () -> new StairBlock(ModBlocks.ALDER_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
