@@ -29,11 +29,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_SILVER_ORE.get())
                 .add(ModBlocks.RAW_SILVER_BLOCK.get())
                 .add(ModBlocks.CHALK_STONE.get())
-                .add(ModBlocks.CHALK_STONE_BRICKS.get());
+                .add(ModBlocks.CHALK_STONE_BRICKS.get())
+                .add(ModBlocks.WATTLE_N_DAUB_PLAIN.get())
+                .add(ModBlocks.WATTLE_N_DAUB_DIAGONAL.get())
+                .add(ModBlocks.WATTLE_N_DAUB_FRAMED.get())
+                .add(ModBlocks.WATTLE_N_DAUB_SIDED.get())
+        ;
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.THATCH_BLOCK.get())
-                .addTag(ModTags.Blocks.ALDER_BLOCKS);
+                .addTag(ModTags.Blocks.ALDER_BLOCKS)
+                .add(ModBlocks.BEECH_LOG.get())
+                .add(ModBlocks.BEECH_WOOD.get())
+                .add(ModBlocks.STRIPPED_BEECH_LOG.get())
+                .add(ModBlocks.STRIPPED_BEECH_WOOD.get())
+        ;
+
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SILVER_BLOCK.get())
@@ -48,7 +59,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALDER_LOG.get())
                 .add(ModBlocks.ALDER_WOOD.get())
                 .add(ModBlocks.STRIPPED_ALDER_LOG.get())
-                .add(ModBlocks.STRIPPED_ALDER_WOOD.get());
+                .add(ModBlocks.STRIPPED_ALDER_WOOD.get())
+                .add(ModBlocks.STRIPPED_ALDER_WOOD.get())
+                .add(ModBlocks.BEECH_LOG.get())
+                .add(ModBlocks.BEECH_WOOD.get())
+                .add(ModBlocks.STRIPPED_BEECH_LOG.get())
+                .add(ModBlocks.STRIPPED_BEECH_WOOD.get())
+        ;
 
         tag(ModTags.Blocks.ALDER_BLOCKS)
                 .add(
@@ -57,7 +74,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.STRIPPED_ALDER_LOG.get(),
                         ModBlocks.STRIPPED_ALDER_WOOD.get(),
                         ModBlocks.ALDER_STAIRS.get()
-
                 );
     }
 }

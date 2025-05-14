@@ -27,6 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHALK_POWDER.get());
 
         saplingItem(ModBlocks.ALDER_SAPLING);
+        saplingItem(ModBlocks.BEECH_SAPLING);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

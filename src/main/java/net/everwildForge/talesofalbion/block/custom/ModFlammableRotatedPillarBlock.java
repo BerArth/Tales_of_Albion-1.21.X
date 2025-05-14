@@ -44,6 +44,13 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
                 return ModBlocks.STRIPPED_ALDER_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
+            if(state.is(ModBlocks.BEECH_LOG.get())){
+                return ModBlocks.STRIPPED_BEECH_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.BEECH_WOOD.get())){
+                return ModBlocks.STRIPPED_BEECH_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);
