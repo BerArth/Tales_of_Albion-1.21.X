@@ -24,5 +24,4 @@ public class ModDatapackEntries extends DatapackBuiltinEntriesProvider {
     public ModDatapackEntries(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(TalesofAlbion.MOD_ID));
     }
-
 }

@@ -28,9 +28,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         //c'est dans cette méthode que nous générons les loot que les différents blocks droprons
         dropSelf(ModBlocks.SILVER_BLOCK.get());
-        dropSelf(ModBlocks.WATTLE_N_DAUB_PLAIN.get());
         dropSelf(ModBlocks.THATCH_BLOCK.get());
         dropSelf(ModBlocks.HEATHER.get());
+
+        //Wattle n daub
+        dropSelf(ModBlocks.WATTLE_N_DAUB_PLAIN.get());
+        dropSelf(ModBlocks.WATTLE_N_DAUB_DIAGONAL.get());
+        dropSelf(ModBlocks.WATTLE_N_DAUB_SIDED.get());
+        dropSelf(ModBlocks.WATTLE_N_DAUB_FRAMED.get());
 
         this.add(ModBlocks.SILVER_ORE.get(),
                 block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
@@ -56,6 +61,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.ALDER_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.ALDER_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        //Beech
+        this.dropSelf(ModBlocks.BEECH_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BEECH_LOG.get());
+        this.dropSelf(ModBlocks.BEECH_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_BEECH_WOOD.get());
+        this.dropSelf(ModBlocks.BEECH_PLANKS.get());
+        this.dropSelf(ModBlocks.BEECH_SAPLING.get());
+        this.add(ModBlocks.BEECH_LEAVES.get(), block ->
+                createLeavesDrops(block,ModBlocks.BEECH_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     //cette méthode comme dit dans la vidéo sert a faire des loot avec plusieur items drop (par exemple en vanila le charbon ou le cooper)

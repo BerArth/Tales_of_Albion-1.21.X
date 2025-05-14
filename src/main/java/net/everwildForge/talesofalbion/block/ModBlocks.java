@@ -39,10 +39,55 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
-    
+
+    //Wattlendaub
     public static final RegistryObject<Block> WATTLE_N_DAUB_PLAIN = registerBlock("wattle_n_daub_plain",
             () -> new Block(BlockBehaviour.Properties.of()
-                .strength(3f).requiresCorrectToolForDrops().sound(SoundType.MUD)));
+                .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+    public static final RegistryObject<Block> WATTLE_N_DAUB_SIDED = registerBlock("wattle_n_daub_sided",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+    public static final RegistryObject<Block> WATTLE_N_DAUB_FRAMED = registerBlock("wattle_n_daub_framed",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+    public static final RegistryObject<Block> WATTLE_N_DAUB_DIAGONAL = registerBlock("wattle_n_daub_diagonal",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+    //Beech
+    public static final RegistryObject<RotatedPillarBlock> BEECH_LOG = registerBlock("beech_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> BEECH_WOOD = registerBlock("beech_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WOOD)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_BEECH_LOG = registerBlock("stripped_beech_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_BIRCH_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_BEECH_WOOD = registerBlock("stripped_beech_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_BIRCH_WOOD)));
+    public static final RegistryObject<Block> BEECH_PLANKS = registerBlock("beech_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;}
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;}
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;}
+            });
+    public static final RegistryObject<Block> BEECH_LEAVES = registerBlock("beech_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;}
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;}
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;}
+            });
+    public static final RegistryObject<Block> BEECH_SAPLING = registerBlock("alder_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.BEECH,BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -66,7 +111,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHALK_STONE_BRICKS = registerBlock("chalk_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
 
     public static final RegistryObject<RotatedPillarBlock> ALDER_LOG = registerBlock("alder_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));

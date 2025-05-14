@@ -26,6 +26,7 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SILVER_ORE_KEY = registerKey("silver_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ALDER_KEY = registerKey("alder");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BEECH_KEY = registerKey("beech");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -46,6 +47,13 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.BEECH_LOG.get()),
+                new ForkingTrunkPlacer(3,3,3),
+                BlockStateProvider.simple(ModBlocks.BEECH_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(3),3),
+                new TwoLayersFeatureSize(1,0,2)).build());
 
     }
 

@@ -25,10 +25,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.ALDER_LOG.get().asItem())
                 .add(ModBlocks.ALDER_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_ALDER_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_ALDER_WOOD.get().asItem());
-
+                .add(ModBlocks.STRIPPED_ALDER_WOOD.get().asItem())
+                .add(ModBlocks.BEECH_WOOD.get().asItem())
+                .add(ModBlocks.BEECH_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_BEECH_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_BEECH_LOG.get().asItem())
+        ;
 
         tag(ItemTags.PLANKS)
-                .add(ModBlocks.ALDER_PLANKS.get().asItem());
+                .add(ModBlocks.ALDER_PLANKS.get().asItem())
+                .add(ModBlocks.BEECH_PLANKS.get().asItem());
     }
 }

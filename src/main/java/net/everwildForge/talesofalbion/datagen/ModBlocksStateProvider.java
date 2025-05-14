@@ -23,7 +23,6 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
         blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
-        blockWithItem(ModBlocks.WATTLE_N_DAUB_PLAIN);
         blockWithItem(ModBlocks.THATCH_BLOCK);
         simpleCrossBlock(ModBlocks.HEATHER.get(), "heather");
 
@@ -42,6 +41,23 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_ALDER_WOOD);
 
         blockWithItem(ModBlocks.ALDER_PLANKS);
+
+        leavesBlock(ModBlocks.ALDER_LEAVES);
+        saplingBlock(ModBlocks.ALDER_SAPLING);
+
+        blockWithItem(ModBlocks.WATTLE_N_DAUB_PLAIN);
+
+        logBlock(ModBlocks.BEECH_LOG.get());
+        logBlock(ModBlocks.STRIPPED_BEECH_LOG.get());
+        axisBlock(ModBlocks.BEECH_WOOD.get(), blockTexture(ModBlocks.BEECH_LOG.get()), blockTexture(ModBlocks.BEECH_LOG.get()));
+        axisBlock(ModBlocks.STRIPPED_BEECH_WOOD.get(), blockTexture(ModBlocks.STRIPPED_BEECH_LOG.get()), blockTexture(ModBlocks.STRIPPED_BEECH_LOG.get()));
+
+        blockItem(ModBlocks.BEECH_LOG);
+        blockItem(ModBlocks.BEECH_WOOD);
+        blockItem(ModBlocks.STRIPPED_BEECH_LOG);
+        blockItem(ModBlocks.STRIPPED_BEECH_WOOD);
+
+        blockWithItem(ModBlocks.BEECH_PLANKS);
 
         leavesBlock(ModBlocks.ALDER_LEAVES);
         saplingBlock(ModBlocks.ALDER_SAPLING);
