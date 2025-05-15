@@ -14,8 +14,11 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -97,12 +100,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.2f).requiresCorrectToolForDrops().sound(SoundType.WOOL)));
 
+    public static final RegistryObject<Block> HEATHER = BLOCKS.register("heather",
+            ()-> new FlowerBlock(MobEffects.LUCK, 5, Block.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+
+    //Chalk
     public static final RegistryObject<Block> CHALK_BLOCK = registerBlock("chalk_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(0.5f).sound(SoundType.BASALT)));
-
-    public static final RegistryObject<Block> HEATHER = BLOCKS.register("heather",
-            ()-> new FlowerBlock(MobEffects.LUCK, 5, Block.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     public static final RegistryObject<Block> CHALK_STONE = registerBlock("chalk_stone",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -112,6 +116,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    //Alder
     public static final RegistryObject<RotatedPillarBlock> ALDER_LOG = registerBlock("alder_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
 
@@ -167,6 +172,26 @@ public class ModBlocks {
     public static final RegistryObject<StairBlock> ALDER_STAIRS = registerBlock("alder_stairs",
             () -> new StairBlock(ModBlocks.ALDER_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
+
+    public static final RegistryObject<SlabBlock> ALDER_SLAB = registerBlock("alder_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<PressurePlateBlock> ALDER_PRESSURE_PLATE = registerBlock("alder_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(0.5f)));
+    public static final RegistryObject<ButtonBlock> ALDER_BUTTON = registerBlock("alder_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 30, BlockBehaviour.Properties.of().strength(0.5f)
+                    .noCollission()));
+
+    public static final RegistryObject<FenceBlock> ALDER_FENCE = registerBlock("alder_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final RegistryObject<FenceGateBlock> ALDER_FENCE_GATE = registerBlock("alder_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final RegistryObject<DoorBlock> ALDER_DOOR = registerBlock("alder_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noCollission()));
+    public static final RegistryObject<TrapDoorBlock> ALDER_TRAP_DOOR= registerBlock("alder_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

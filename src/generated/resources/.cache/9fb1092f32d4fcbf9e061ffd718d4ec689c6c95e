@@ -1,4 +1,5 @@
-// 1.21	2025-05-14T11:42:29.4466584	Recipes
+// 1.21	2025-05-15T13:00:58.4395103	Recipes
+df7ee7b168d01e644186f50404964e82babaf17b data/talesofalbion/advancement/recipes/misc/alder_planks.json
 801558ec92251d07f33a7f0627099dbac4dc3126 data/talesofalbion/advancement/recipes/misc/chalk_stone.json
 3e9b958a1bc929d6583ca3253a11efd17c836102 data/talesofalbion/advancement/recipes/misc/chalk_stone_bricks.json
 e162d09f6d68b478891372bce6d2aa53bbce77ae data/talesofalbion/advancement/recipes/misc/raw_silver.json
@@ -13,6 +14,7 @@ c2d1a08246cc2557a4c218f4256b699b0b264239 data/talesofalbion/advancement/recipes/
 ac9df504e1603197916ca90984143a80b73199df data/talesofalbion/advancement/recipes/misc/silver_ingot_from_smelting_silver_ore.json
 9d87df374820facc69cf02ab53cdea7400b9e908 data/talesofalbion/advancement/recipes/misc/silver_nugget.json
 d72cfff3cdeb0850b16e11410a0d724c24028880 data/talesofalbion/advancement/recipes/misc/wattle_n_daub_plain.json
+d36371897193fe1f9f6c76953241b4aa41194bad data/talesofalbion/recipe/alder_planks.json
 70f0f7be4352b1866b802dc2f024e65f41eb5b3d data/talesofalbion/recipe/chalk_stone.json
 7001926997bba5b1381b264f8d30a58cd598dce1 data/talesofalbion/recipe/chalk_stone_bricks.json
 9b940d16486ff7c4ab8e0245ec75d796a46734a0 data/talesofalbion/recipe/raw_silver.json

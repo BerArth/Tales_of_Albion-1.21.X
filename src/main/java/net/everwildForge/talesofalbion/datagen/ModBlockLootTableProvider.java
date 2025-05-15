@@ -52,6 +52,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHALK_STONE.get());
         dropSelf(ModBlocks.CHALK_STONE_BRICKS.get());
 
+        //Alder
         this.dropSelf(ModBlocks.ALDER_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_ALDER_LOG.get());
         this.dropSelf(ModBlocks.ALDER_PLANKS.get());
@@ -63,6 +64,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createLeavesDrops(block, ModBlocks.ALDER_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.ALDER_STAIRS.get());
+        this.add(ModBlocks.ALDER_SLAB.get(), block ->
+                createSlabItemTable(ModBlocks.ALDER_SLAB.get()));
+        this.dropSelf(ModBlocks.ALDER_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.ALDER_BUTTON.get());
+
+        dropSelf(ModBlocks.ALDER_FENCE.get());
+        dropSelf(ModBlocks.ALDER_FENCE_GATE.get());
+
+        this.add(ModBlocks.ALDER_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ALDER_DOOR.get()));
+        this.dropSelf(ModBlocks.ALDER_TRAP_DOOR.get());
 
         //Beech
         this.dropSelf(ModBlocks.BEECH_LOG.get());

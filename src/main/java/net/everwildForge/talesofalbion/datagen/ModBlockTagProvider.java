@@ -73,7 +73,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.ALDER_WOOD.get(),
                         ModBlocks.STRIPPED_ALDER_LOG.get(),
                         ModBlocks.STRIPPED_ALDER_WOOD.get(),
-                        ModBlocks.ALDER_STAIRS.get()
+                        ModBlocks.ALDER_STAIRS.get(),
+                        ModBlocks.ALDER_SLAB.get(),
+                        ModBlocks.ALDER_PRESSURE_PLATE.get(),
+                        ModBlocks.ALDER_BUTTON.get(),
+                        ModBlocks.ALDER_FENCE_GATE.get(),
+                        ModBlocks.ALDER_FENCE.get(),
+                        ModBlocks.ALDER_DOOR.get(),
+                        ModBlocks.ALDER_TRAP_DOOR.get()
                 );
     }
 }

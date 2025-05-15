@@ -21,10 +21,18 @@
   "block.talesofalbion.alder_wood": "Alder Wood",
   "block.talesofalbion.stripped_alder_log": "Stripped Alder Log",
   "block.talesofalbion.stripped_alder_wood": "Stripped Alder Wood",
+
   "block.talesofalbion.alder_planks": "Alder Planks",
   "block.talesofalbion.alder_leaves": "Alder Leaves",
   "block.talesofalbion.alder_sapling": "Alder Sapling",
   "block.talesofalbion.alder_stairs": "Alder Stairs",
+  "block.talesofalbion.alder_slab": "Alder Slab",
+  "block.talesofalbion.alder_pressure_plate": "Alder Pressure Plate",
+  "block.talesofalbion.alder_button": "Alder Button",
+  "block.talesofalbion.alder_fence_gate": "Alder Fence Gate",
+  "block.talesofalbion.alder_fence": "Alder Fence",
+  "block.talesofalbion.alder_door": "Alder Door",
+  "block.talesofalbion.alder_trapdoor": "Alder Trapdoor",
 
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",

@@ -5,6 +5,10 @@
     "talesofalbion:deepslate_silver_ore",
     "talesofalbion:raw_silver_block",
     "talesofalbion:chalk_stone",
-    "talesofalbion:chalk_stone_bricks"
+    "talesofalbion:chalk_stone_bricks",
+    "talesofalbion:wattle_n_daub_plain",
+    "talesofalbion:wattle_n_daub_diagonal",
+    "talesofalbion:wattle_n_daub_framed",
+    "talesofalbion:wattle_n_daub_sided"
   ]
 }

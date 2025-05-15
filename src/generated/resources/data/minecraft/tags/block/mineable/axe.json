@@ -1,6 +1,10 @@
 {
   "values": [
     "talesofalbion:thatch_block",
-    "#talesofalbion:alder_blocks"
+    "#talesofalbion:alder_blocks",
+    "talesofalbion:beech_log",
+    "talesofalbion:beech_wood",
+    "talesofalbion:stripped_beech_log",
+    "talesofalbion:stripped_beech_wood"
   ]
 }

@@ -3,6 +3,7 @@ package net.everwildForge.talesofalbion.datagen;
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.item.ModItems;
+import net.everwildForge.talesofalbion.tag.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -83,6 +84,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("AAA")
                 .define('A', ModItems.DAUB_BALL.get())
                 .unlockedBy(getHasName(ModItems.DAUB_BALL.get()), has(ModItems.DAUB_BALL.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.ALDER_PLANKS.get(), 4)
+                .requires(ModTags.Items.ALDER_LOGS)
+                .unlockedBy(getHasName(ModBlocks.ALDER_LOG.get()), has(ModBlocks.ALDER_LOG.get())).save(recipeOutput);
+
     }
 
 

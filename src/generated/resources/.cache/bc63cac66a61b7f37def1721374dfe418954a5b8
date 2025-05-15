@@ -1,3 +1,4 @@
-// 1.21	2025-05-13T15:06:16.0125578	Tags for minecraft:item mod id talesofalbion
-2bf869b68e55c1610c00208047dd6bfec328c498 data/minecraft/tags/item/logs_that_burn.json
-4c4d978aa4c4dd4c7bda9be794e503f297b848cd data/minecraft/tags/item/planks.json
+// 1.21	2025-05-15T13:00:58.4415108	Tags for minecraft:item mod id talesofalbion
+b9427d83d160815a5bff7c826d941cf081870ba6 data/minecraft/tags/item/logs_that_burn.json
+8ecb5a0942bb1e0c41682859312eed8ad2444a65 data/minecraft/tags/item/planks.json
+8fb08b0b297e6755434aa7ef5cfb0dd366ce58d5 data/talesofalbion/tags/item/alder_logs.json

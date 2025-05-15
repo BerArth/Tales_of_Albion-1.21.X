@@ -31,6 +31,8 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.CHALK_STONE);
         blockWithItem(ModBlocks.CHALK_STONE_BRICKS, "chalk_stone_bricks_bottom", "chalk_stone_bricks_top", "chalk_stone_bricks");
 
+
+        //Alder
         logBlock(ModBlocks.ALDER_LOG.get());
         logBlock(ModBlocks.STRIPPED_ALDER_LOG.get());
         axisBlock(ModBlocks.ALDER_WOOD.get(), blockTexture(ModBlocks.ALDER_LOG.get()), blockTexture(ModBlocks.ALDER_LOG.get()));
@@ -47,9 +49,24 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.ALDER_SAPLING);
 
         stairsBlock(ModBlocks.ALDER_STAIRS.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()));
-        blockItem(ModBlocks.ALDER_STAIRS);
+        slabBlock(ModBlocks.ALDER_SLAB.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()), blockTexture(ModBlocks.ALDER_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.ALDER_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()));
+        buttonBlock(ModBlocks.ALDER_BUTTON.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()));
 
-        blockWithItem(ModBlocks.WATTLE_N_DAUB_PLAIN);
+        fenceBlock(ModBlocks.ALDER_FENCE.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()));
+        fenceGateBlock(ModBlocks.ALDER_FENCE_GATE.get(), blockTexture(ModBlocks.ALDER_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.ALDER_DOOR.get(), modLoc("block/alder_door_bottom"), modLoc("block/alder_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.ALDER_TRAP_DOOR.get(), modLoc("block/alder_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.ALDER_STAIRS);
+        blockItem(ModBlocks.ALDER_SLAB);
+        blockItem(ModBlocks.ALDER_PRESSURE_PLATE);
+        blockItem(ModBlocks.ALDER_FENCE_GATE);
+        blockItem(ModBlocks.ALDER_TRAP_DOOR, "_bottom");
+
+
+        //
         blockWithItem(ModBlocks.WATTLE_N_DAUB_DIAGONAL, "wattle_n_daub_diagonal_left", "wattle_n_daub_diagonal_right");
         blockWithItem(ModBlocks.WATTLE_N_DAUB_FRAMED,"wattle_n_daub_framed_bottom","wattle_n_daub_framed_top","wattle_n_daub_framed_side");
         blockWithItem(ModBlocks.WATTLE_N_DAUB_SIDED,"wattle_n_daub_sided_left","wattle_n_daub_sided_right");

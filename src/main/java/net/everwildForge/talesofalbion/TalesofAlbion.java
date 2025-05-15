@@ -70,12 +70,21 @@ public class TalesofAlbion
             event.accept(ModBlocks.THATCH_BLOCK);
             event.accept(ModBlocks.CHALK_STONE);
             event.accept(ModBlocks.CHALK_STONE_BRICKS);
+
+
             event.accept(ModBlocks.STRIPPED_ALDER_WOOD);
             event.accept(ModBlocks.ALDER_WOOD);
             event.accept(ModBlocks.STRIPPED_ALDER_LOG);
             event.accept(ModBlocks.ALDER_LOG);
             event.accept(ModBlocks.ALDER_PLANKS);
             event.accept(ModBlocks.ALDER_STAIRS);
+            event.accept(ModBlocks.ALDER_SLAB);
+            event.accept(ModBlocks.ALDER_PRESSURE_PLATE);
+            event.accept(ModBlocks.ALDER_BUTTON);
+            event.accept(ModBlocks.ALDER_FENCE);
+            event.accept(ModBlocks.ALDER_FENCE_GATE);
+            event.accept(ModBlocks.ALDER_DOOR);
+            event.accept(ModBlocks.ALDER_TRAP_DOOR);
 
 
             event.accept(ModBlocks.WATTLE_N_DAUB_PLAIN);

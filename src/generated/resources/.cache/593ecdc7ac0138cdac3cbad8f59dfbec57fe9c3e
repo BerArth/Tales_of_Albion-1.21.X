@@ -1,9 +1,9 @@
-// 1.21	2025-05-14T11:56:42.5889954	Tags for minecraft:block mod id talesofalbion
+// 1.21	2025-05-15T12:26:55.1527522	Tags for minecraft:block mod id talesofalbion
 fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/flowers.json
-2bf869b68e55c1610c00208047dd6bfec328c498 data/minecraft/tags/block/logs_that_burn.json
-17bb6c5c4ed40e1c0ebc91c1b69d7d6497c33f6e data/minecraft/tags/block/mineable/axe.json
-907c2e4d8f6115d16f0b95c3d4b7437e3afc440f data/minecraft/tags/block/mineable/pickaxe.json
+2c1599829bde5271ffb8f463cd5e2baccbb4f92d data/minecraft/tags/block/logs_that_burn.json
+f6364cbbeb0d88313aa8517622feadb951405bd4 data/minecraft/tags/block/mineable/axe.json
+281b5cee5b93473458f81f898555b330d5ca72e6 data/minecraft/tags/block/mineable/pickaxe.json
 146ec2b5c9e059309e61f515f68b7f06950f8930 data/minecraft/tags/block/mineable/shovel.json
 da54bba7c035eac861f68b8874d045a33d260126 data/minecraft/tags/block/needs_iron_tool.json
 fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/small_flowers.json
-e46408a23471bb80c9050e58b2729fb1060713ba data/talesofalbion/tags/block/alder_blocks.json
+d162d25263037d0b5022f01556d1c9fc605d597a data/talesofalbion/tags/block/alder_blocks.json
