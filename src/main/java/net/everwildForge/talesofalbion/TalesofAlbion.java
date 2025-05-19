@@ -50,7 +50,7 @@ public class TalesofAlbion
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(ModBlocks::registerFlammables);
     }
 
     // Add the example block item to the building blocks tab

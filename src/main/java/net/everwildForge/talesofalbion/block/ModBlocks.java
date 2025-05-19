@@ -183,9 +183,9 @@ public class ModBlocks {
                     .noCollission()));
 
     public static final RegistryObject<FenceBlock> ALDER_FENCE = registerBlock("alder_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
     public static final RegistryObject<FenceGateBlock> ALDER_FENCE_GATE = registerBlock("alder_fence_gate",
-            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(2f)));
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE)));
 
     public static final RegistryObject<DoorBlock> ALDER_DOOR = registerBlock("alder_door",
             () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noCollission()));
@@ -201,6 +201,13 @@ public class ModBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+    public static void registerFlammables(){
+        FireBlock fire = (FireBlock) Blocks.FIRE;
+
+        fire.setFlammable(ModBlocks.ALDER_FENCE.get(), 5, 20);
+        fire.setFlammable(ModBlocks.ALDER_FENCE_GATE.get(), 5, 20);
     }
 
     public static void register(IEventBus eventBus) {
