@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "talesofalbion:block/alder_slab"
+    },
+    "type=double": {
+      "model": "talesofalbion:block/alder_planks"
+    },
+    "type=top": {
+      "model": "talesofalbion:block/alder_slab_top"
+    }
+  }
+}

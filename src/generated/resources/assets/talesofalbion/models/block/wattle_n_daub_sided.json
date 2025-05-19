@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "talesofalbion:block/wattle_n_daub_sided_right",
+    "side": "talesofalbion:block/wattle_n_daub_sided_left"
+  }
+}

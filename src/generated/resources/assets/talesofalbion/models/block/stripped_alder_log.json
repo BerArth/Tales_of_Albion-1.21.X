@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "talesofalbion:block/stripped_alder_log_top",
+    "side": "talesofalbion:block/stripped_alder_log"
+  }
+}
