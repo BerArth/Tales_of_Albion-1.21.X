@@ -66,11 +66,13 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ALDER_TRAP_DOOR, "_bottom");
 
 
-        //
+        //Wattle n daub
         blockWithItem(ModBlocks.WATTLE_N_DAUB_DIAGONAL, "wattle_n_daub_diagonal_left", "wattle_n_daub_diagonal_right");
         blockWithItem(ModBlocks.WATTLE_N_DAUB_FRAMED,"wattle_n_daub_framed_bottom","wattle_n_daub_framed_top","wattle_n_daub_framed_side");
         blockWithItem(ModBlocks.WATTLE_N_DAUB_SIDED,"wattle_n_daub_sided_left","wattle_n_daub_sided_right");
+        axisBlock(WATTLE_N_DAUB_DIAGONAL,"wattle_n_daub_diagonal_left","wattle_n_daub_top);
 
+        //Beech
         logBlock(ModBlocks.BEECH_LOG.get());
         logBlock(ModBlocks.STRIPPED_BEECH_LOG.get());
         axisBlock(ModBlocks.BEECH_WOOD.get(), blockTexture(ModBlocks.BEECH_LOG.get()), blockTexture(ModBlocks.BEECH_LOG.get()));
@@ -114,6 +116,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
                         modLoc("block/"+ left),
                         modLoc("block/"+ right)));
     }
+
 
     private String name(Block block) {
         return ForgeRegistries.BLOCKS.getKey(block).getPath();
