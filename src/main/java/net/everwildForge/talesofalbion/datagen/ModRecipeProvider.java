@@ -152,6 +152,24 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', Items.STICK)
                 .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.DAUB_BALL.get())
+                .pattern("WSW")
+                .pattern("CPC")
+                .pattern("WSW")
+                .define('W', Items.WHEAT)
+                .define('S', Items.SAND)
+                .define('C', Items.CLAY)
+                .define('P', ModItems.CHALK_POWDER.get())
+                .unlockedBy(getHasName(ModItems.CHALK_POWDER.get()),has(ModItems.CHALK_POWDER.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.WATTLE_N_DAUB_PLAIN.get())
+                .pattern("DWD")
+                .pattern("DWD")
+                .pattern("DWD")
+                .define('W', Items.WHEAT)
+                .define('D', ModItems.DAUB_BALL.get())
+                .unlockedBy(getHasName(ModItems.CHALK_POWDER.get()),has(ModItems.CHALK_POWDER.get())).save(recipeOutput);
+
     }
 
 
