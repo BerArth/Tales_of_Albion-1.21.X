@@ -24,7 +24,6 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
         blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
-        blockWithItem(ModBlocks.WATTLE_N_DAUB_PLAIN);
         blockWithItem(ModBlocks.THATCH_BLOCK);
         simpleCrossBlock(ModBlocks.HEATHER.get(), "heather");
 
@@ -66,16 +65,14 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ALDER_FENCE_GATE);
         blockItem(ModBlocks.ALDER_TRAP_DOOR, "_bottom");
 
-
-        //BEECH
-        blockWithItem(ModBlocks.WATTLE_N_DAUB_DIAGONAL, "wattle_n_daub_diagonal_left", "wattle_n_daub_diagonal_right");
-
-        //blockWithItem(ModBlocks.WATTLE_N_DAUB_FRAMED,"wattle_n_daub_framed_bottom","wattle_n_daub_framed_top","wattle_n_daub_framed");
+        //Wattle n' Daub
+        blockWithItem(ModBlocks.WATTLE_N_DAUB_PLAIN);
+        logBlock((RotatedPillarBlock) ModBlocks.WATTLE_N_DAUB_DIAGONAL.get());
         logBlock((RotatedPillarBlock) ModBlocks.WATTLE_N_DAUB_FRAMED.get());
         blockItem(ModBlocks.WATTLE_N_DAUB_FRAMED);
+        logBlock((RotatedPillarBlock) ModBlocks.WATTLE_N_DAUB_SIDED.get());
 
-        blockWithItem(ModBlocks.WATTLE_N_DAUB_SIDED,"wattle_n_daub_sided_left","wattle_n_daub_sided_right");
-
+        //Beech
         logBlock(ModBlocks.BEECH_LOG.get());
         logBlock(ModBlocks.STRIPPED_BEECH_LOG.get());
         axisBlock(ModBlocks.BEECH_WOOD.get(), blockTexture(ModBlocks.BEECH_LOG.get()), blockTexture(ModBlocks.BEECH_LOG.get()));
@@ -112,7 +109,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         );
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject, String left, String right) {
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String left, String right) {
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().cubeColumnHorizontal(
                         name(blockRegistryObject.get()),

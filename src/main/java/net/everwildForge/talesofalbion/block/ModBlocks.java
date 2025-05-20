@@ -2,12 +2,11 @@ package net.everwildForge.talesofalbion.block;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.custom.ModFlammableRotatedPillarBlock;
-import net.everwildForge.talesofalbion.block.custom.WattleAndDaubFramedBlock;
+import net.everwildForge.talesofalbion.block.custom.WattleAndDaubBlock;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.everwildForge.talesofalbion.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -17,9 +16,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -46,16 +43,13 @@ public class ModBlocks {
 
     //Wattlendaub
     public static final RegistryObject<Block> WATTLE_N_DAUB_PLAIN = registerBlock("wattle_n_daub_plain",
-            () -> new Block(BlockBehaviour.Properties.of()
-                .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+            () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> WATTLE_N_DAUB_SIDED = registerBlock("wattle_n_daub_sided",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+            () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> WATTLE_N_DAUB_FRAMED = registerBlock("wattle_n_daub_framed",
-            () -> new WattleAndDaubFramedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+            () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> WATTLE_N_DAUB_DIAGONAL = registerBlock("wattle_n_daub_diagonal",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+            () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     //Beech
     public static final RegistryObject<RotatedPillarBlock> BEECH_LOG = registerBlock("beech_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));

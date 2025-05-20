@@ -91,6 +91,7 @@ public class TalesofAlbion
             event.accept(ModBlocks.WATTLE_N_DAUB_DIAGONAL);
             event.accept(ModBlocks.WATTLE_N_DAUB_FRAMED);
             event.accept(ModBlocks.WATTLE_N_DAUB_SIDED);
+
             event.accept(ModBlocks.BEECH_LOG);
             event.accept(ModBlocks.BEECH_PLANKS);
             event.accept(ModBlocks.BEECH_WOOD);
