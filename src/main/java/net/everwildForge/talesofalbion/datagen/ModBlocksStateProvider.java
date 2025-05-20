@@ -5,6 +5,7 @@ import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -68,7 +69,11 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         //BEECH
         blockWithItem(ModBlocks.WATTLE_N_DAUB_DIAGONAL, "wattle_n_daub_diagonal_left", "wattle_n_daub_diagonal_right");
-        blockWithItem(ModBlocks.WATTLE_N_DAUB_FRAMED,"wattle_n_daub_framed_bottom","wattle_n_daub_framed_top","wattle_n_daub_framed_side");
+
+        //blockWithItem(ModBlocks.WATTLE_N_DAUB_FRAMED,"wattle_n_daub_framed_bottom","wattle_n_daub_framed_top","wattle_n_daub_framed");
+        logBlock((RotatedPillarBlock) ModBlocks.WATTLE_N_DAUB_FRAMED.get());
+        blockItem(ModBlocks.WATTLE_N_DAUB_FRAMED);
+
         blockWithItem(ModBlocks.WATTLE_N_DAUB_SIDED,"wattle_n_daub_sided_left","wattle_n_daub_sided_right");
 
         logBlock(ModBlocks.BEECH_LOG.get());
@@ -139,5 +144,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
                 models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
+
+
 
 }

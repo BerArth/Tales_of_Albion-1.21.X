@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "bottom": "talesofalbion:block/wattle_n_daub_framed_bottom",
-    "side": "talesofalbion:block/wattle_n_daub_framed_side",
-    "top": "talesofalbion:block/wattle_n_daub_framed_top"
+    "end": "talesofalbion:block/wattle_n_daub_framed_top",
+    "side": "talesofalbion:block/wattle_n_daub_framed"
   }
 }

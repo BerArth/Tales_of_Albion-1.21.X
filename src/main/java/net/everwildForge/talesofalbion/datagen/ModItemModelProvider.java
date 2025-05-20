@@ -34,6 +34,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.ALDER_SAPLING);
         saplingItem(ModBlocks.BEECH_SAPLING);
+
+
     }
 
 
@@ -60,5 +62,13 @@ public class ModItemModelProvider extends ItemModelProvider {
                 ResourceLocation.parse("item/generated")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID,"item/" + item.getId().getPath()));
     }
+
+    protected void blockItem(RegistryObject<Block> block) {
+        this.withExistingParent(
+                block.getId().getPath(),
+                modLoc("block/" + block.getId().getPath())
+        );
+    }
+
 
 }

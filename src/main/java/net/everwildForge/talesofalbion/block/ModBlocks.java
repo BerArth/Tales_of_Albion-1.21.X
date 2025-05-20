@@ -2,6 +2,7 @@ package net.everwildForge.talesofalbion.block;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.custom.ModFlammableRotatedPillarBlock;
+import net.everwildForge.talesofalbion.block.custom.WattleAndDaubFramedBlock;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.everwildForge.talesofalbion.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
@@ -51,8 +52,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
     public static final RegistryObject<Block> WATTLE_N_DAUB_FRAMED = registerBlock("wattle_n_daub_framed",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+            () -> new WattleAndDaubFramedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> WATTLE_N_DAUB_DIAGONAL = registerBlock("wattle_n_daub_diagonal",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
