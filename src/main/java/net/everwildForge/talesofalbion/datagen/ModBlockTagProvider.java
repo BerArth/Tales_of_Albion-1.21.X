@@ -6,6 +6,7 @@ import net.everwildForge.talesofalbion.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -65,6 +66,21 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BEECH_WOOD.get())
                 .add(ModBlocks.STRIPPED_BEECH_LOG.get())
                 .add(ModBlocks.STRIPPED_BEECH_WOOD.get())
+        ;
+
+        tag(BlockTags.LOGS)
+                .add(ModBlocks.ALDER_LOG.get())
+                .add(ModBlocks.ALDER_WOOD.get())
+                .add(ModBlocks.STRIPPED_ALDER_LOG.get())
+                .add(ModBlocks.STRIPPED_ALDER_WOOD.get())
+        ;
+
+        tag(BlockTags.PLANKS)
+                .add(ModBlocks.ALDER_PLANKS.get())
+        ;
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.ALDER_FENCE.get())
         ;
 
         tag(ModTags.Blocks.ALDER_BLOCKS)

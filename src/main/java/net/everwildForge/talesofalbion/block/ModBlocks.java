@@ -184,8 +184,9 @@ public class ModBlocks {
 
     public static final RegistryObject<FenceBlock> ALDER_FENCE = registerBlock("alder_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
+
     public static final RegistryObject<FenceGateBlock> ALDER_FENCE_GATE = registerBlock("alder_fence_gate",
-            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE)));
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).sound(SoundType.WOOD)));
 
     public static final RegistryObject<DoorBlock> ALDER_DOOR = registerBlock("alder_door",
             () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noCollission()));

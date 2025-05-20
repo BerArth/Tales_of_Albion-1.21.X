@@ -8,6 +8,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 
@@ -85,9 +87,70 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', ModItems.DAUB_BALL.get())
                 .unlockedBy(getHasName(ModItems.DAUB_BALL.get()), has(ModItems.DAUB_BALL.get())).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.ALDER_PLANKS.get(), 4)
+        //ALDER
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALDER_PLANKS.get(), 4)
                 .requires(ModTags.Items.ALDER_LOGS)
                 .unlockedBy(getHasName(ModBlocks.ALDER_LOG.get()), has(ModBlocks.ALDER_LOG.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALDER_WOOD.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.ALDER_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_LOG.get()), has(ModBlocks.ALDER_LOG.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_ALDER_WOOD.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.STRIPPED_ALDER_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.STRIPPED_ALDER_LOG.get()), has(ModBlocks.STRIPPED_ALDER_LOG.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.ALDER_DOOR.get(), 3)
+                .pattern("AA")
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.ALDER_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.ALDER_TRAP_DOOR.get(), 2)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.ALDER_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALDER_STAIRS.get(), 4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.ALDER_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALDER_SLAB.get(), 6)
+                .pattern("AAA")
+                .define('A', ModBlocks.ALDER_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.ALDER_PRESSURE_PLATE.get())
+                .pattern("AA")
+                .define('A', ModBlocks.ALDER_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE ,ModBlocks.ALDER_BUTTON.get(), 1)
+                .requires(ModBlocks.ALDER_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ALDER_FENCE.get())
+                .pattern("A/A")
+                .pattern("A/A")
+                .define('A', ModBlocks.ALDER_PLANKS.get())
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.ALDER_FENCE_GATE.get())
+                .pattern("A/A")
+                .pattern("A/A")
+                .define('/', ModBlocks.ALDER_PLANKS.get())
+                .define('A', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.ALDER_PLANKS.get()), has(ModBlocks.ALDER_PLANKS.get())).save(recipeOutput);
 
     }
 
