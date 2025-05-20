@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "talesofalbion:wattle_n_daub_sided"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "talesofalbion:blocks/wattle_n_daub_sided"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "talesofalbion:block/alder_planks",
+    "side": "talesofalbion:block/alder_planks",
+    "top": "talesofalbion:block/alder_planks"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_daub_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "talesofalbion:daub_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "talesofalbion:wattle_n_daub_plain"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_daub_ball"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "talesofalbion:wattle_n_daub_plain"
+    ]
+  }
+}

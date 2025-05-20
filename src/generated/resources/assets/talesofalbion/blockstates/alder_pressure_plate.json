@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "talesofalbion:block/alder_pressure_plate"
+    },
+    "powered=true": {
+      "model": "talesofalbion:block/alder_pressure_plate_down"
+    }
+  }
+}

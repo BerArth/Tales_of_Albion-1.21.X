@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "talesofalbion:block/stripped_beech_log",
+    "side": "talesofalbion:block/stripped_beech_log"
+  }
+}
