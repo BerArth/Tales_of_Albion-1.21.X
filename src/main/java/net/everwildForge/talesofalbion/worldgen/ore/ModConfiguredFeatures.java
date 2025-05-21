@@ -52,7 +52,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.BEECH_LOG.get()),
                 new ForkingTrunkPlacer(3,3,3),
                 BlockStateProvider.simple(ModBlocks.BEECH_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(3),3),
+                new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(3),5),
                 new TwoLayersFeatureSize(1,0,2)).build());
 
     }
