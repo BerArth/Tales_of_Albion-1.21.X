@@ -2,6 +2,7 @@ package net.everwildForge.talesofalbion;
 
 import com.mojang.logging.LogUtils;
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.entity.ModEntities;
 import net.everwildForge.talesofalbion.item.ModCreativeModeTabs;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -41,6 +42,9 @@ public class TalesofAlbion
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        //Pour les animaux et mobs
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

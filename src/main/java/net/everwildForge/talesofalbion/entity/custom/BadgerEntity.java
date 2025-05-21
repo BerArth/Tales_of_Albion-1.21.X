@@ -1,6 +1,7 @@
 package net.everwildForge.talesofalbion.entity.custom;
 
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.entity.ModEntities;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
@@ -63,7 +64,7 @@ public class BadgerEntity extends Animal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring (ServerLevel plevel, AgeableMob pOtherParent){
-        return null;
+        return ModEntities.BADGER.get().create(plevel);
     }
 
     //ce code est à garder tel quel et sert à ce que les
