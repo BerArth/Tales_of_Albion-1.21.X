@@ -61,8 +61,12 @@ public class TalesofAlbion
             event.accept(ModItems.SILVER_INGOT);
             event.accept(ModItems.RAW_SILVER);
             event.accept(ModItems.SILVER_NUGGET);
+
             event.accept(ModItems.DAUB_BALL);
+
             event.accept(ModItems.CHALK_POWDER);
+
+            event.accept(ModItems.DRIED_PEAT);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){

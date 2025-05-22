@@ -1,4 +1,4 @@
-// 1.21	2025-05-22T12:19:34.6890679	Loot Tables
+// 1.21	2025-05-22T13:42:28.4896424	Loot Tables
 209e8e45c702119381fca41b851473f80777ae30 data/talesofalbion/loot_table/blocks/alder_button.json
 92f861f11f58c0cdb24113868aba78ce01a8d637 data/talesofalbion/loot_table/blocks/alder_door.json
 b7927ec513f5989d593fe9265b17ad9a670b2a30 data/talesofalbion/loot_table/blocks/alder_fence.json
@@ -21,6 +21,7 @@ ab56b635e53e624c78b310b1f731d63c6f0caffa data/talesofalbion/loot_table/blocks/be
 039e8949b5ecb30e63aa60110e9a52ef8667d499 data/talesofalbion/loot_table/blocks/chalk_stone.json
 93b9ce234f994bb554b24669bd83a970d09e06d8 data/talesofalbion/loot_table/blocks/chalk_stone_bricks.json
 f2daa2e5bcca00a067984ca651c7c1c3c2c3f53a data/talesofalbion/loot_table/blocks/deepslate_silver_ore.json
+ae5eda9724754de0ce66fe4830c839eb0d50c496 data/talesofalbion/loot_table/blocks/dried_peat_block.json
 11dfe06611bf190e0eab739ec599d73a38371995 data/talesofalbion/loot_table/blocks/heather.json
 7f51e495f3517c6419cfaa64fd7e7ac3a4596a67 data/talesofalbion/loot_table/blocks/peat_dirt.json
 40b1c83ab41a8e0f7c2dede743f73df018a878ce data/talesofalbion/loot_table/blocks/peat_grass.json

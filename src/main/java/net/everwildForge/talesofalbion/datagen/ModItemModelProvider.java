@@ -26,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SILVER_NUGGET.get());
         basicItem(ModItems.DAUB_BALL.get());
         basicItem(ModItems.CHALK_POWDER.get());
+        basicItem(ModItems.DRIED_PEAT.get());
 
         buttonItem(ModBlocks.ALDER_BUTTON, ModBlocks.ALDER_PLANKS);
         fenceItem(ModBlocks.ALDER_FENCE, ModBlocks.ALDER_PLANKS);

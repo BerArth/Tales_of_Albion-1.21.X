@@ -197,6 +197,11 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(1.5f).sound(SoundType.GRASS)));
 
+    public static final RegistryObject<Block> DRIED_PEAT_BLOCK = registerBlock("dried_peat_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

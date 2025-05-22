@@ -91,7 +91,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         //peat
         blockWithItem(ModBlocks.PEAT_DIRT);
         blockWithItem(ModBlocks.PEAT_GRASS, "peat_block", "peat_block_top", "peat_block_side");
-
+        blockWithItem(ModBlocks.DRIED_PEAT_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

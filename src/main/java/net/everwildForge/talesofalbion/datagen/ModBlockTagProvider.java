@@ -9,6 +9,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -38,6 +39,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.WATTLE_N_DAUB_DIAGONAL.get())
                 .add(ModBlocks.WATTLE_N_DAUB_FRAMED.get())
                 .add(ModBlocks.WATTLE_N_DAUB_SIDED.get())
+                .add(ModBlocks.DRIED_PEAT_BLOCK.get())
         ;
 
         tag(BlockTags.MINEABLE_WITH_AXE)

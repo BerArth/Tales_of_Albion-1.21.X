@@ -29,6 +29,7 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.HEATHER.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CHALK_POWDER = ITEMS.register("chalk_powder", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DRIED_PEAT = ITEMS.register("dried_peat", () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus)

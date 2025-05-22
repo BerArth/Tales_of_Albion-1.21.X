@@ -28,6 +28,7 @@ public class ModRecipeProvider extends RecipeProvider {
         List<ItemLike> SILVER_SMELTABLE = List.of(ModItems.RAW_SILVER.get(), ModBlocks.SILVER_ORE.get());
         List<ItemLike> SILVER_BLASTABLE = List.of(ModItems.RAW_SILVER.get(),  ModBlocks.SILVER_ORE.get(), ModBlocks.DEEPSLATE_SILVER_ORE.get());
 
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -163,6 +164,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('D', ModItems.DAUB_BALL.get())
                 .unlockedBy(getHasName(ModItems.DAUB_BALL.get()),has(ModItems.DAUB_BALL.get())).save(recipeOutput);
 
+
+        //peat
+
+        oreSmelting(recipeOutput, ModBlocks.PEAT_DIRT.get(), RecipeCategory.MISC, ModItems.DRIED_PEAT.get(), 0.25f, 150, "peat");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIED_PEAT_BLOCK.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.DRIED_PEAT.get())
+                .unlockedBy(getHasName(ModItems.DRIED_PEAT.get()), has(ModItems.DRIED_PEAT.get())).save(recipeOutput);
+
+
     }
 
 
@@ -172,6 +185,13 @@ public class ModRecipeProvider extends RecipeProvider {
         oreCooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
+
+    protected static void oreSmelting(RecipeOutput recipeOutput, ItemLike input, RecipeCategory category, ItemLike result,
+                                      float experience, int cookingTime, String group) {
+        oreCooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new,
+                List.of(input), category, result, experience, cookingTime, group, "_from_smelting");
+    }
+
 
     //recette pour le blastfurnace
     protected static void oreBlasting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

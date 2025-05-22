@@ -5,6 +5,7 @@
   "item.talesofalbion.silver_nugget": "Silver Nugget",
   "item.talesofalbion.daub_ball": "Daub Ball",
   "item.talesofalbion.chalk_powder": "Chalk Powder",
+  "item.talesofalbion.dried_peat": "Dried Peat",
 
   "block.talesofalbion.silver_block": "Block of Silver",
   "block.talesofalbion.silver_ore": "Silver Ore",
@@ -47,6 +48,7 @@
 
   "block.talesofalbion.peat_dirt": "Peat Dirt",
   "block.talesofalbion.peat_grass": "Peat Grass",
+  "block.talesofalbion.dried_peat_block": "Dried Peat Block",
 
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",
