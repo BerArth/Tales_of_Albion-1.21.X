@@ -1,4 +1,4 @@
-// 1.21	2025-05-22T13:42:28.4896424	Loot Tables
+// 1.21	2025-05-22T23:58:56.0322932	Loot Tables
 209e8e45c702119381fca41b851473f80777ae30 data/talesofalbion/loot_table/blocks/alder_button.json
 92f861f11f58c0cdb24113868aba78ce01a8d637 data/talesofalbion/loot_table/blocks/alder_door.json
 b7927ec513f5989d593fe9265b17ad9a670b2a30 data/talesofalbion/loot_table/blocks/alder_fence.json
@@ -12,10 +12,18 @@ ace01791faadb7e9e852f8cb3c7793252e9e4507 data/talesofalbion/loot_table/blocks/al
 c9d361bd209cb6478d8b9c4517ccbd2b4d430e8b data/talesofalbion/loot_table/blocks/alder_stairs.json
 c87c8dfe5bf549189483c4d0a408d9415b7acd12 data/talesofalbion/loot_table/blocks/alder_trapdoor.json
 ced88aad9ec94e7e7476e6132b39620c38fc7143 data/talesofalbion/loot_table/blocks/alder_wood.json
+d68610e979087a9eff0fd42ec9376fa6d1003c46 data/talesofalbion/loot_table/blocks/beech_button.json
+ed28cd08a696c24766563b071052ddddb91df147 data/talesofalbion/loot_table/blocks/beech_door.json
+4638e71cbed7cc648084d6d86082a7a11afb69c9 data/talesofalbion/loot_table/blocks/beech_fence.json
+b9def9de674a934ae2167267c62f31875bded1df data/talesofalbion/loot_table/blocks/beech_fence_gate.json
 ab56b635e53e624c78b310b1f731d63c6f0caffa data/talesofalbion/loot_table/blocks/beech_leaves.json
 0a67409efb82892921a96e4645f53332e34a9fa0 data/talesofalbion/loot_table/blocks/beech_log.json
 39b9c326b8ca14ae83905a26ce7440806daa88ec data/talesofalbion/loot_table/blocks/beech_planks.json
+2ebc167d0344ecf8b24a78c47841b5115950fb15 data/talesofalbion/loot_table/blocks/beech_pressure_plate.json
 919c3f575b02b0409c50cb73cd17bd6a2e858480 data/talesofalbion/loot_table/blocks/beech_sapling.json
+40389109145e2e951a807569e63f0e9499009be1 data/talesofalbion/loot_table/blocks/beech_slab.json
+24723a6564273ce8285321ef971337ac5ab76510 data/talesofalbion/loot_table/blocks/beech_stairs.json
+2561513d4c3a25d0a5326fb7c92dcb3ffe81fe21 data/talesofalbion/loot_table/blocks/beech_trapdoor.json
 3a6684472b2afbd992a6899f73a2882f5c753ce0 data/talesofalbion/loot_table/blocks/beech_wood.json
 3d57197e6bec8d7657ec9d1cf8353b77aa9ea6da data/talesofalbion/loot_table/blocks/chalk_block.json
 039e8949b5ecb30e63aa60110e9a52ef8667d499 data/talesofalbion/loot_table/blocks/chalk_stone.json

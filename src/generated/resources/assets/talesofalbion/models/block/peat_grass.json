@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "talesofalbion:block/peat_block",
+    "side": "talesofalbion:block/peat_block_side",
+    "top": "talesofalbion:block/peat_block_top"
+  }
+}
