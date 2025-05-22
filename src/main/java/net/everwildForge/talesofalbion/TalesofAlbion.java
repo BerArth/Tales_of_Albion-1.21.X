@@ -101,6 +101,15 @@ public class TalesofAlbion
             event.accept(ModBlocks.BEECH_WOOD);
             event.accept(ModBlocks.STRIPPED_BEECH_LOG);
             event.accept(ModBlocks.STRIPPED_BEECH_WOOD);
+            event.accept(ModBlocks.BEECH_PLANKS);
+            event.accept(ModBlocks.BEECH_STAIRS);
+            event.accept(ModBlocks.BEECH_SLAB);
+            event.accept(ModBlocks.BEECH_PRESSURE_PLATE);
+            event.accept(ModBlocks.BEECH_BUTTON);
+            event.accept(ModBlocks.BEECH_FENCE);
+            event.accept(ModBlocks.BEECH_FENCE_GATE);
+            event.accept(ModBlocks.BEECH_DOOR);
+            event.accept(ModBlocks.BEECH_TRAP_DOOR);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){

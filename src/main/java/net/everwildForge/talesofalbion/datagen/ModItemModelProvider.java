@@ -29,8 +29,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DRIED_PEAT.get());
 
         buttonItem(ModBlocks.ALDER_BUTTON, ModBlocks.ALDER_PLANKS);
+        buttonItem(ModBlocks.BEECH_BUTTON, ModBlocks.BEECH_PLANKS);
         fenceItem(ModBlocks.ALDER_FENCE, ModBlocks.ALDER_PLANKS);
+        fenceItem(ModBlocks.BEECH_FENCE, ModBlocks.BEECH_PLANKS);
         simpleBlockItem(ModBlocks.ALDER_DOOR);
+        simpleBlockItem(ModBlocks.BEECH_DOOR);
 
 
         saplingItem(ModBlocks.ALDER_SAPLING);
