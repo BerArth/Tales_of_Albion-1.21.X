@@ -34,6 +34,7 @@ public class BadgerEntity extends Animal {
         //La priorité 0 est LA chose priorisée avant tout dès qu'elle est possible
         this.goalSelector.addGoal(0,new FloatGoal(this));
         this.goalSelector.addGoal(1,new PanicGoal(this,2.0));
+        //chnger wheat pour blueberry
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(Items.WHEAT), false));
 
         this.goalSelector.addGoal(3, new AvoidEntityGoal<Villager>(this, Villager.class, 6.0F, 1.0D, 1.5D));
@@ -58,6 +59,7 @@ public class BadgerEntity extends Animal {
     @Override
     public boolean isFood(ItemStack pStack) {
         //item considéré comme nourriture
+        //à remplacer par blueberry
         return pStack.is(Items.WHEAT);
     }
 
