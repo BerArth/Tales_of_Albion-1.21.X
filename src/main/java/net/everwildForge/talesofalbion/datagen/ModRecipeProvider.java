@@ -80,13 +80,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', ModBlocks.CHALK_STONE.get())
                 .unlockedBy(getHasName(ModBlocks.CHALK_STONE.get()), has(ModBlocks.CHALK_STONE.get())).save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WATTLE_N_DAUB_PLAIN.get())
-                .pattern("AAA")
-                .pattern("AAA")
-                .pattern("AAA")
-                .define('A', ModItems.DAUB_BALL.get())
-                .unlockedBy(getHasName(ModItems.DAUB_BALL.get()), has(ModItems.DAUB_BALL.get())).save(recipeOutput);
-
         //ALDER
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALDER_PLANKS.get(), 4)
                 .requires(ModTags.Items.ALDER_LOGS)
@@ -168,7 +161,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("DWD")
                 .define('W', Items.WHEAT)
                 .define('D', ModItems.DAUB_BALL.get())
-                .unlockedBy(getHasName(ModItems.CHALK_POWDER.get()),has(ModItems.CHALK_POWDER.get())).save(recipeOutput);
+                .unlockedBy(getHasName(ModItems.DAUB_BALL.get()),has(ModItems.DAUB_BALL.get())).save(recipeOutput);
 
     }
 

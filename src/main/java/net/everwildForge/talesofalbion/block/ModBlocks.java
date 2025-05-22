@@ -187,6 +187,15 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> ALDER_TRAP_DOOR= registerBlock("alder_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
 
+    //peat
+
+    public static final RegistryObject<Block> PEAT_DIRT = registerBlock("peat_dirt",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1.5f).sound(SoundType.ROOTED_DIRT)));
+
+    public static final RegistryObject<Block> PEAT_GRASS = registerBlock("peat_grass",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1.5f).sound(SoundType.GRASS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

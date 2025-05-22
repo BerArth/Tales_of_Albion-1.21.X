@@ -1,11 +1,11 @@
-// 1.21	2025-05-20T11:57:45.7071919	Tags for minecraft:block mod id talesofalbion
+// 1.21	2025-05-22T12:19:34.6880685	Tags for minecraft:block mod id talesofalbion
 ac6f4d4a89bed4b75ab9a953887e5e5b3879a71c data/minecraft/tags/block/fences.json
 fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/flowers.json
 2bf869b68e55c1610c00208047dd6bfec328c498 data/minecraft/tags/block/logs.json
 2c1599829bde5271ffb8f463cd5e2baccbb4f92d data/minecraft/tags/block/logs_that_burn.json
 f6364cbbeb0d88313aa8517622feadb951405bd4 data/minecraft/tags/block/mineable/axe.json
 281b5cee5b93473458f81f898555b330d5ca72e6 data/minecraft/tags/block/mineable/pickaxe.json
-146ec2b5c9e059309e61f515f68b7f06950f8930 data/minecraft/tags/block/mineable/shovel.json
+9a4d8cfba9d0c5d7a37681ce1e2e91d4aac27f12 data/minecraft/tags/block/mineable/shovel.json
 da54bba7c035eac861f68b8874d045a33d260126 data/minecraft/tags/block/needs_iron_tool.json
 4c4d978aa4c4dd4c7bda9be794e503f297b848cd data/minecraft/tags/block/planks.json
 fa4f48bd6523dc6310e6b454dd565ef2a17eca82 data/minecraft/tags/block/small_flowers.json

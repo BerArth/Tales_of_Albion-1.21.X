@@ -88,6 +88,10 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.BEECH_LEAVES);
         saplingBlock(ModBlocks.BEECH_SAPLING);
 
+        //peat
+        blockWithItem(ModBlocks.PEAT_DIRT);
+        blockWithItem(ModBlocks.PEAT_GRASS, "peat_block", "peat_block_top", "peat_block_side");
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

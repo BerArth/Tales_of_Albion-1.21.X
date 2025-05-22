@@ -85,6 +85,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BEECH_SAPLING.get());
         this.add(ModBlocks.BEECH_LEAVES.get(), block ->
                 createLeavesDrops(block,ModBlocks.BEECH_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        //peat
+        this.dropSelf(ModBlocks.PEAT_DIRT.get());
+        this.add(ModBlocks.PEAT_GRASS.get(), block ->
+                createSingleItemTableWithSilkTouch(ModBlocks.PEAT_GRASS.get(), ModBlocks.PEAT_DIRT.get()));
     }
 
     //cette méthode comme dit dans la vidéo sert a faire des loot avec plusieur items drop (par exemple en vanila le charbon ou le cooper)

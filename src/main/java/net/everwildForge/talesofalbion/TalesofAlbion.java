@@ -103,12 +103,19 @@ public class TalesofAlbion
             event.accept(ModBlocks.SILVER_ORE);
             event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
             event.accept(ModBlocks.RAW_SILVER_BLOCK);
+
             event.accept(ModItems.HEATHER);
+
             event.accept(ModBlocks.CHALK_BLOCK);
+
             event.accept(ModBlocks.ALDER_SAPLING);
             event.accept(ModBlocks.ALDER_LEAVES);
+
             event.accept(ModBlocks.BEECH_SAPLING);
             event.accept(ModBlocks.BEECH_LEAVES);
+
+            event.accept(ModBlocks.PEAT_DIRT);
+            event.accept(ModBlocks.PEAT_GRASS);
         }
     }
 
