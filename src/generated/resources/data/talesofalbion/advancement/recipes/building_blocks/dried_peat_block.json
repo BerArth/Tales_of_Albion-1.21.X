@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_peat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "talesofalbion:dried_peat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "talesofalbion:dried_peat_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_peat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "talesofalbion:dried_peat_block"
+    ]
+  }
+}

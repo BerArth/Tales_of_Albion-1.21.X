@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "talesofalbion:block/peat_dirt"
+  }
+}
