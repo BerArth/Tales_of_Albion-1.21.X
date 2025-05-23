@@ -85,6 +85,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BEECH_SAPLING.get());
         this.add(ModBlocks.BEECH_LEAVES.get(), block ->
                 createLeavesDrops(block,ModBlocks.BEECH_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.BEECH_STAIRS.get());
+        this.add(ModBlocks.BEECH_SLAB.get(), block ->
+                createSlabItemTable(ModBlocks.BEECH_SLAB.get()));
+        this.dropSelf(ModBlocks.BEECH_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BEECH_BUTTON.get());
+        dropSelf(ModBlocks.BEECH_FENCE.get());
+        dropSelf(ModBlocks.BEECH_FENCE_GATE.get());
+
+        this.add(ModBlocks.BEECH_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BEECH_DOOR.get()));
+        this.dropSelf(ModBlocks.BEECH_TRAP_DOOR.get());
 
         //peat
         this.dropSelf(ModBlocks.PEAT_DIRT.get());

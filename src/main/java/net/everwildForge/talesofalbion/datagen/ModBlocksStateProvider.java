@@ -88,6 +88,24 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.BEECH_LEAVES);
         saplingBlock(ModBlocks.BEECH_SAPLING);
 
+        stairsBlock(ModBlocks.BEECH_STAIRS.get(), blockTexture(ModBlocks.BEECH_PLANKS.get()));
+        slabBlock(ModBlocks.BEECH_SLAB.get(), blockTexture(ModBlocks.BEECH_PLANKS.get()), blockTexture(ModBlocks.BEECH_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.BEECH_PRESSURE_PLATE.get(), blockTexture(ModBlocks.BEECH_PLANKS.get()));
+        buttonBlock(ModBlocks.BEECH_BUTTON.get(), blockTexture(ModBlocks.BEECH_PLANKS.get()));
+
+        fenceBlock(ModBlocks.BEECH_FENCE.get(), blockTexture(ModBlocks.BEECH_PLANKS.get()));
+        fenceGateBlock(ModBlocks.BEECH_FENCE_GATE.get(), blockTexture(ModBlocks.BEECH_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.BEECH_DOOR.get(), modLoc("block/beech_door_bottom"), modLoc("block/beech_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.BEECH_TRAP_DOOR.get(), modLoc("block/beech_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.BEECH_STAIRS);
+        blockItem(ModBlocks.BEECH_SLAB);
+        blockItem(ModBlocks.BEECH_PRESSURE_PLATE);
+        blockItem(ModBlocks.BEECH_FENCE_GATE);
+        blockItem(ModBlocks.BEECH_TRAP_DOOR, "_bottom");
+
+
         //peat
         blockWithItem(ModBlocks.PEAT_DIRT);
         blockWithItem(ModBlocks.PEAT_GRASS, "peat_block", "peat_block_top", "peat_block_side");

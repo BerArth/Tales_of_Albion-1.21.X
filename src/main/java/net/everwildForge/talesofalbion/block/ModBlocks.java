@@ -50,6 +50,7 @@ public class ModBlocks {
             () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> WATTLE_N_DAUB_DIAGONAL = registerBlock("wattle_n_daub_diagonal",
             () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+
     //Beech
     public static final RegistryObject<RotatedPillarBlock> BEECH_LOG = registerBlock("beech_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));
@@ -85,6 +86,31 @@ public class ModBlocks {
             });
     public static final RegistryObject<Block> BEECH_SAPLING = registerBlock("beech_sapling",
             () -> new SaplingBlock(ModTreeGrowers.BEECH,BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+
+    public static final RegistryObject<StairBlock> BEECH_STAIRS = registerBlock("beech_stairs",
+            () -> new StairBlock(ModBlocks.BEECH_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_STAIRS)));
+
+    public static final RegistryObject<SlabBlock> BEECH_SLAB = registerBlock("beech_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<PressurePlateBlock> BEECH_PRESSURE_PLATE = registerBlock("beech_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.of().strength(0.5f)));
+    public static final RegistryObject<ButtonBlock> BEECH_BUTTON = registerBlock("beech_button",
+            () -> new ButtonBlock(BlockSetType.BIRCH, 30, BlockBehaviour.Properties.of().strength(0.5f)
+                    .noCollission()));
+
+    public static final RegistryObject<FenceBlock> BEECH_FENCE = registerBlock("beech_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_FENCE)));
+
+    public static final RegistryObject<FenceGateBlock> BEECH_FENCE_GATE = registerBlock("beech_fence_gate",
+            () -> new FenceGateBlock(WoodType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_FENCE_GATE).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<DoorBlock> BEECH_DOOR = registerBlock("beech_door",
+            () -> new DoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.of().strength(1f).noCollission()));
+    public static final RegistryObject<TrapDoorBlock> BEECH_TRAP_DOOR= registerBlock("beech_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
+
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -217,6 +243,8 @@ public class ModBlocks {
 
         fire.setFlammable(ModBlocks.ALDER_FENCE.get(), 5, 20);
         fire.setFlammable(ModBlocks.ALDER_FENCE_GATE.get(), 5, 20);
+        fire.setFlammable(ModBlocks.BEECH_FENCE.get(), 5, 20);
+        fire.setFlammable(ModBlocks.BEECH_FENCE_GATE.get(), 5, 20);
     }
 
     public static void register(IEventBus eventBus) {
