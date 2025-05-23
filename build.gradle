@@ -110,9 +110,17 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven {
-        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    /**maven {
+        name = "GeckoLib"
+        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+        content {
+            includeGroup "software.bernie.geckolib"
+        }
+    }*/
+    flatDir{
+        dirs 'libs'
     }
+
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
@@ -136,7 +144,13 @@ dependencies {
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
     // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
     // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
-    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.21:4.4.3")
+
+    // GeckoLib
+    implementation name: 'geckolib-forge-1.21.5-5.0.1'
+
+    implementation('net.sf.jopt-simple:jopt-simple:5.0.4') {
+        version { strictly '5.0.4' }
+    }
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

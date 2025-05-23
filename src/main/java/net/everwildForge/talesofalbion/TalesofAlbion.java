@@ -30,9 +30,12 @@ public class TalesofAlbion
     public static final String MOD_ID = "talesofalbion";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+    //initializes GeckoLib
+
 
     public TalesofAlbion()
     {
+        //initializes GeckoLib
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
