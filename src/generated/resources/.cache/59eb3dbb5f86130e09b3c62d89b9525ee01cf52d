@@ -1,4 +1,4 @@
-// 1.21	2025-05-22T23:58:56.0322932	Loot Tables
+// 1.21	2025-05-23T12:18:10.5345948	Loot Tables
 209e8e45c702119381fca41b851473f80777ae30 data/talesofalbion/loot_table/blocks/alder_button.json
 92f861f11f58c0cdb24113868aba78ce01a8d637 data/talesofalbion/loot_table/blocks/alder_door.json
 b7927ec513f5989d593fe9265b17ad9a670b2a30 data/talesofalbion/loot_table/blocks/alder_fence.json
@@ -25,6 +25,7 @@ ab56b635e53e624c78b310b1f731d63c6f0caffa data/talesofalbion/loot_table/blocks/be
 24723a6564273ce8285321ef971337ac5ab76510 data/talesofalbion/loot_table/blocks/beech_stairs.json
 2561513d4c3a25d0a5326fb7c92dcb3ffe81fe21 data/talesofalbion/loot_table/blocks/beech_trapdoor.json
 3a6684472b2afbd992a6899f73a2882f5c753ce0 data/talesofalbion/loot_table/blocks/beech_wood.json
+a9552afaa88be18b98ded6c37a6c9ee53d779e5e data/talesofalbion/loot_table/blocks/blue_berry_bush.json
 3d57197e6bec8d7657ec9d1cf8353b77aa9ea6da data/talesofalbion/loot_table/blocks/chalk_block.json
 039e8949b5ecb30e63aa60110e9a52ef8667d499 data/talesofalbion/loot_table/blocks/chalk_stone.json
 93b9ce234f994bb554b24669bd83a970d09e06d8 data/talesofalbion/loot_table/blocks/chalk_stone_bricks.json

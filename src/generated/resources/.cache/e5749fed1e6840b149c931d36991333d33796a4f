@@ -1,4 +1,4 @@
-// 1.21	2025-05-22T23:58:56.0263114	Block States: talesofalbion
+// 1.21	2025-05-23T12:18:10.5295944	Block States: talesofalbion
 161f5b8359e929d1600eb93eea3fd9ba99a23d4c assets/talesofalbion/blockstates/alder_button.json
 cbfdc2bbb274fa64066ef8016307bc3506552bc8 assets/talesofalbion/blockstates/alder_door.json
 1d05975033e45f68980a5a88549258bbb7843549 assets/talesofalbion/blockstates/alder_fence.json
@@ -25,6 +25,7 @@ f2e5aaffca4755721bd117a217f4b1fdf3a02f71 assets/talesofalbion/blockstates/beech_
 5f65bc4cba991a3e17237f8f925dc8e3d3103246 assets/talesofalbion/blockstates/beech_stairs.json
 fe4eb9733263d783785fdff6673f282dd08b9936 assets/talesofalbion/blockstates/beech_trapdoor.json
 a16f7bce0eccc07db99a359a9b3484661124aa1b assets/talesofalbion/blockstates/beech_wood.json
+01681a23f88bf1427d4f43d430db1724759b5bf2 assets/talesofalbion/blockstates/blue_berry_bush.json
 8d184b2d8fe3a83031578b6543c25f157198c25e assets/talesofalbion/blockstates/chalk_block.json
 f5d86f9042a6dfe42239fb6ab00630122335d556 assets/talesofalbion/blockstates/chalk_stone.json
 a1299fa7aaf9d4d0c9a9bd64efc90e4f79736cb9 assets/talesofalbion/blockstates/chalk_stone_bricks.json
@@ -111,6 +112,10 @@ b685b7efcc808b13b785306608a61a1b11711f28 assets/talesofalbion/models/block/beech
 c2c74c0c30c0aa9b0f997d60e6695923efc1b727 assets/talesofalbion/models/block/beech_trapdoor_top.json
 520eb071c8b15e44001c8905c36b22b717f375ab assets/talesofalbion/models/block/beech_wood.json
 f8650004a8e431d407a6b3d8e645f5e02290b968 assets/talesofalbion/models/block/beech_wood_horizontal.json
+fbb4af808cb8afcbbe7847abb71effba59a47671 assets/talesofalbion/models/block/blue_berry_bush_stage0.json
+a32693d6d026b83646a76bd3a6dc0f062af3ff4b assets/talesofalbion/models/block/blue_berry_bush_stage1.json
+853a90503a0fac6864dcbb8e125a30560e276d28 assets/talesofalbion/models/block/blue_berry_bush_stage2.json
+0066311ea4d848cba0624b9cda0018aad9856873 assets/talesofalbion/models/block/blue_berry_bush_stage3.json
 5dd8492bd40b634b2b29733c288997000318374b assets/talesofalbion/models/block/chalk_block.json
 5cd2899cb6cbac534b79a3635dc373651c9dc9bb assets/talesofalbion/models/block/chalk_stone.json
 d05689c7f292a40665f69fd4d70ff508a212494c assets/talesofalbion/models/block/chalk_stone_bricks.json

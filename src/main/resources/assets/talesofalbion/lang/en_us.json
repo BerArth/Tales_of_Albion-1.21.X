@@ -7,6 +7,8 @@
   "item.talesofalbion.chalk_powder": "Chalk Powder",
   "item.talesofalbion.dried_peat": "Dried Peat",
 
+  "item.talesofalbion.blue_berries": "Blue Berries",
+
   "block.talesofalbion.silver_block": "Block of Silver",
   "block.talesofalbion.silver_ore": "Silver Ore",
   "block.talesofalbion.deepslate_silver_ore": "Deepslate Silver Ore",
@@ -49,6 +51,8 @@
   "block.talesofalbion.peat_dirt": "Peat Dirt",
   "block.talesofalbion.peat_grass": "Peat Grass",
   "block.talesofalbion.dried_peat_block": "Dried Peat Block",
+
+  "block.talesofalbion.blue_berry_bush": "Blue Berry Bush",
 
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",

@@ -4,6 +4,7 @@ import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,6 +31,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHALK_POWDER = ITEMS.register("chalk_powder", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DRIED_PEAT = ITEMS.register("dried_peat", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BLUE_BERRIES = ITEMS.register("blue_berries",
+            () -> new ItemNameBlockItem(ModBlocks.BLUE_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLUE_BERRIES)));
 
 
     public static void register(IEventBus eventBus)

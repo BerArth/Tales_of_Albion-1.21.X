@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -27,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DAUB_BALL.get());
         basicItem(ModItems.CHALK_POWDER.get());
         basicItem(ModItems.DRIED_PEAT.get());
+        basicItem(ModItems.BLUE_BERRIES.get());
 
         buttonItem(ModBlocks.ALDER_BUTTON, ModBlocks.ALDER_PLANKS);
         buttonItem(ModBlocks.BEECH_BUTTON, ModBlocks.BEECH_PLANKS);

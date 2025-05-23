@@ -67,6 +67,8 @@ public class TalesofAlbion
             event.accept(ModItems.CHALK_POWDER);
 
             event.accept(ModItems.DRIED_PEAT);
+
+            event.accept(ModItems.BLUE_BERRIES);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
