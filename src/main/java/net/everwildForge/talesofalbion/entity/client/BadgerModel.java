@@ -27,17 +27,19 @@ public class BadgerModel<T extends BadgerEntity> extends HierarchicalModel<T> {
     private final ModelPart backLeftLeg;
     private final ModelPart backRightLeg;
     private final ModelPart tail;
+    private final ModelPart pelt;
 
     public BadgerModel(ModelPart root) {
         super(RenderType::entityCutout);
-        this.root = root;
+        this.root = root.getChild("badger");
         this.body = root.getChild("body");
         this.head = root.getChild("head");
         this.frontLeftLeg = root.getChild("front_left_leg");
         this.frontRightLeg = root.getChild("front_right_leg");
         this.backLeftLeg = root.getChild("back_left_leg");
         this.backRightLeg = root.getChild("back_right_leg");
-        this.tail = root.getChild("tail");
+        this.tail = body.getChild("tail");
+        this.pelt = body.getChild("pelt");
     }
 
     public static LayerDefinition createBodyLayer() {
