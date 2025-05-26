@@ -44,6 +44,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.THATCH_BLOCK.get())
+                .add(ModBlocks.THATCH_STAIRS.get())
+                .add(ModBlocks.LATTICE_THATCH_BLOCK.get())
+                .add(ModBlocks.LATTICE_THATCH_STAIRS.get())
                 .addTag(ModTags.Blocks.ALDER_BLOCKS)
                 .add(ModBlocks.BEECH_LOG.get())
                 .add(ModBlocks.BEECH_WOOD.get())

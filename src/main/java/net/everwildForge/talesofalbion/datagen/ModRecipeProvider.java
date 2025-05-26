@@ -176,6 +176,39 @@ public class ModRecipeProvider extends RecipeProvider {
        SingleItemRecipeBuilder.stonecutting(
                Ingredient.of(ModItems.SILVER_INGOT.get()), RecipeCategory.MISC, ModItems.SILVER_PENNIG.get(), 1)
                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get())).save(recipeOutput);
+
+       //thatch
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.THATCH_BLOCK.get(), 2)
+                .pattern("CSC")
+                .pattern("SHS")
+                .pattern("CSC")
+                .define('C', Items.SUGAR_CANE)
+                .define('S', Items.STICK)
+                .define('H', Items.HAY_BLOCK)
+                .unlockedBy(getHasName(Items.HAY_BLOCK),has(Items.HAY_BLOCK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.LATTICE_THATCH_BLOCK.get(), 2)
+                .pattern("SSS")
+                .pattern("STS")
+                .pattern("STS")
+                .define('S', Items.STICK)
+                .define('T', ModBlocks.THATCH_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.THATCH_BLOCK.get()),has(ModBlocks.THATCH_BLOCK.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.THATCH_STAIRS.get(), 3)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.THATCH_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.THATCH_BLOCK.get()),has(ModBlocks.THATCH_BLOCK.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.LATTICE_THATCH_STAIRS.get(), 3)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', ModBlocks.LATTICE_THATCH_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.THATCH_BLOCK.get()),has(ModBlocks.THATCH_BLOCK.get())).save(recipeOutput);
     }
 
 

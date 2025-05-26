@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -30,6 +31,12 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
         blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
         blockWithItem(ModBlocks.THATCH_BLOCK);
+        stairsBlock(ModBlocks.THATCH_STAIRS.get(), blockTexture(ModBlocks.THATCH_BLOCK.get()));
+        blockItem(ModBlocks.THATCH_STAIRS);
+        blockWithItem(ModBlocks.LATTICE_THATCH_BLOCK, "thatch_block", "thatch_block", "lattice_thatch_block");
+        stairsTopBottom(ModBlocks.LATTICE_THATCH_STAIRS.get(), modLoc("block/lattice_thatch_block"), modLoc("block/thatch_block"));
+        blockItem(ModBlocks.LATTICE_THATCH_STAIRS);
+
         simpleCrossBlock(ModBlocks.HEATHER.get(), "heather");
 
         blockWithItem(ModBlocks.CHALK_BLOCK, "chalk_bottom", "chalk_top", "chalk");
@@ -186,6 +193,31 @@ public class ModBlocksStateProvider extends BlockStateProvider {
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
+
+    private void stairsTopBottom(Block block, ResourceLocation sideTexture, ResourceLocation topBottomTexture) {
+        ResourceLocation baseName = ForgeRegistries.BLOCKS.getKey(block);
+        if (baseName == null) return;
+
+        ModelFile stairs = models().stairs(baseName.getPath(),
+                sideTexture,
+                topBottomTexture,
+                topBottomTexture
+        );
+
+        ModelFile stairsInner = models().stairsInner(baseName.getPath() + "_inner",
+                sideTexture,
+                topBottomTexture,
+                topBottomTexture
+        );
+
+        ModelFile stairsOuter = models().stairsOuter(baseName.getPath() + "_outer",
+                sideTexture,
+                topBottomTexture,
+                topBottomTexture
+        );
+
+        stairsBlock((StairBlock) block, stairs, stairsInner, stairsOuter);
+    }
 
 
 }

@@ -34,6 +34,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SILVER_BLOCK.get());
         dropSelf(ModBlocks.WATTLE_N_DAUB_PLAIN.get());
         dropSelf(ModBlocks.THATCH_BLOCK.get());
+        dropSelf(ModBlocks.LATTICE_THATCH_BLOCK.get());
+        dropSelf(ModBlocks.THATCH_STAIRS.get());
+        dropSelf(ModBlocks.LATTICE_THATCH_STAIRS.get());
         dropSelf(ModBlocks.HEATHER.get());
 
         //Wattle n daub

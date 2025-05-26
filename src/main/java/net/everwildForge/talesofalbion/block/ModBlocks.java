@@ -119,7 +119,19 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> THATCH_BLOCK = registerBlock("thatch_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.2f).requiresCorrectToolForDrops().sound(SoundType.WOOL)));
+                    .strength(2f).sound(SoundType.WOOL)));
+
+    public static final RegistryObject<Block> LATTICE_THATCH_BLOCK = registerBlock("lattice_thatch_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f).sound(SoundType.WOOL)));
+
+    public static final RegistryObject<StairBlock> THATCH_STAIRS = registerBlock("thatch_stairs",
+            () -> new StairBlock(ModBlocks.THATCH_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).sound(SoundType.WOOL)));
+
+    public static final RegistryObject<StairBlock> LATTICE_THATCH_STAIRS = registerBlock("lattice_thatch_stairs",
+            () -> new StairBlock(ModBlocks.THATCH_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).sound(SoundType.WOOL)));
 
     public static final RegistryObject<Block> HEATHER = BLOCKS.register("heather",
             ()-> new FlowerBlock(MobEffects.LUCK, 5, Block.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));

@@ -74,6 +74,9 @@ public class TalesofAlbion
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.THATCH_BLOCK);
+            event.accept(ModBlocks.THATCH_STAIRS);
+            event.accept(ModBlocks.LATTICE_THATCH_BLOCK);
+            event.accept(ModBlocks.LATTICE_THATCH_STAIRS);
             event.accept(ModBlocks.CHALK_STONE);
             event.accept(ModBlocks.CHALK_STONE_BRICKS);
 
