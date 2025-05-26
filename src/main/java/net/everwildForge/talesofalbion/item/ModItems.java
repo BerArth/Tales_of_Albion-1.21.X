@@ -35,6 +35,9 @@ public class ModItems {
     public static final RegistryObject<Item> BLUE_BERRIES = ITEMS.register("blue_berries",
             () -> new ItemNameBlockItem(ModBlocks.BLUE_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLUE_BERRIES)));
 
+    public static final RegistryObject<Item> SILVER_PENNIG = ITEMS.register("silver_pennig",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus)
     {

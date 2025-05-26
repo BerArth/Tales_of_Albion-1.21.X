@@ -4,16 +4,13 @@ import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.everwildForge.talesofalbion.tag.ModTags;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 
-import java.awt.*;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -176,6 +173,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.DRIED_PEAT.get()), has(ModItems.DRIED_PEAT.get())).save(recipeOutput);
 
 
+       SingleItemRecipeBuilder.stonecutting(
+               Ingredient.of(ModItems.SILVER_INGOT.get()), RecipeCategory.MISC, ModItems.SILVER_PENNIG.get(), 1)
+               .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get())).save(recipeOutput);
     }
 
 

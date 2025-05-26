@@ -39,6 +39,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.ALDER_SAPLING);
         saplingItem(ModBlocks.BEECH_SAPLING);
 
+        basicItem(ModItems.SILVER_PENNIG.get());
+
 
     }
 

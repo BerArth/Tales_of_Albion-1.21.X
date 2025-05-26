@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(new ItemStack(ModItems.SILVER_INGOT.get()));
                         pOutput.accept(new ItemStack(ModItems.RAW_SILVER.get()));
                         pOutput.accept(new ItemStack(ModItems.SILVER_NUGGET.get()));
+                        pOutput.accept(new ItemStack(ModItems.SILVER_PENNIG.get()));
 
                     })).build());
 
