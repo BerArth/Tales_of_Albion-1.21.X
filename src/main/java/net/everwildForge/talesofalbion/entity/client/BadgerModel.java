@@ -75,7 +75,7 @@ public class BadgerModel<T extends BadgerEntity> extends HierarchicalModel<T> {
     }
 
     @Override
-    public void setupAnim(T BadgerEntity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(BadgerEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.m_142109_().getAllParts().forEach(ModelPart::resetPose);
         //add the animation to rotate the head towards the player when he is nearby
         this.applyHeadRotation(netHeadYaw, headPitch);
