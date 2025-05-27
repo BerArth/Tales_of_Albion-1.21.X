@@ -8,10 +8,7 @@ import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
-import net.minecraft.client.model.geom.builders.CubeListBuilder;
-import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.minecraft.client.model.geom.builders.MeshDefinition;
-import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
@@ -19,79 +16,72 @@ import net.minecraft.util.Mth;
 public class BadgerModel<T extends BadgerEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION =
             new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID,"badger"),"main");
-    private final ModelPart root;
+    private final ModelPart badger;
     private final ModelPart body;
-    private final ModelPart head;
-    private final ModelPart frontLeftLeg;
-    private final ModelPart frontRightLeg;
-    private final ModelPart backLeftLeg;
-    private final ModelPart backRightLeg;
-    private final ModelPart tail;
     private final ModelPart pelt;
+    private final ModelPart tail;
+    private final ModelPart head;
+    private final ModelPart frontleftleg;
+    private final ModelPart frontrightleg;
+    private final ModelPart backrightleg;
+    private final ModelPart backleftleg;
 
     public BadgerModel(ModelPart root) {
         super(RenderType::entityCutout);
-        this.root = root.getChild("badger");
-        this.body = root.getChild("body");
-        this.head = root.getChild("head");
-        this.frontLeftLeg = root.getChild("front_left_leg");
-        this.frontRightLeg = root.getChild("front_right_leg");
-        this.backLeftLeg = root.getChild("back_left_leg");
-        this.backRightLeg = root.getChild("back_right_leg");
-        this.tail = body.getChild("tail");
-        this.pelt = body.getChild("pelt");
+        this.badger = root.getChild("badger");
+        this.body = this.badger.getChild("body");
+        this.pelt = this.body.getChild("pelt");
+        this.tail = this.body.getChild("tail");
+        this.head = this.badger.getChild("head");
+        this.frontleftleg = this.badger.getChild("frontleftleg");
+        this.frontrightleg = this.badger.getChild("frontrightleg");
+        this.backrightleg = this.badger.getChild("backrightleg");
+        this.backleftleg = this.badger.getChild("backleftleg");
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        partdefinition.addOrReplaceChild("body",
-                CubeListBuilder.create()
-                        .texOffs(11, 16).addBox(-3.5F, 0.0F, -5.0F, 7.0F, 4.0F, 12.0F),
-                PartPose.offset(0.0F, 20.0F, 0.0F));
+        PartDefinition badger = partdefinition.addOrReplaceChild("badger", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, -1.0F));
 
-        partdefinition.addOrReplaceChild("head",
-                CubeListBuilder.create()
-                        .texOffs(10, 20).addBox(-2.4F, -1.5F, -4.0F, 4.8F, 2.0F, 4.0F),
-                PartPose.offset(0.0F, 18.5F, -5.5F));
+        PartDefinition body = badger.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0083F, -4.1667F, 2.2667F));
 
-        partdefinition.addOrReplaceChild("tail",
-                CubeListBuilder.create()
-                        .texOffs(25, 2).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 4.0F, 1.0F),
-                PartPose.offset(0.0F, 19.0F, 6.9F));
+        PartDefinition body_r1 = body.addOrReplaceChild("body_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-3.5F, -2.0F, -6.0F, 7.0F, 4.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.0083F, -0.3333F, -0.2667F, 0.0262F, 0.0F, 0.0F));
 
-        partdefinition.addOrReplaceChild("front_left_leg",
-                CubeListBuilder.create()
-                        .texOffs(14, 22).addBox(0.0F, 0.0F, 0.0F, 1.2F, 2.5F, 1.6F),
-                PartPose.offset(2.8F, 21.5F, -3.8F));
+        PartDefinition pelt = body.addOrReplaceChild("pelt", CubeListBuilder.create().texOffs(0, 16).addBox(3.5125F, 0.5F, -5.5F, 0.0F, 4.0F, 11.0F, new CubeDeformation(0.0F))
+                .texOffs(22, 16).addBox(-3.5125F, 0.5F, -5.5F, 0.0F, 4.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0042F, -2.3333F, 0.1333F));
 
-        partdefinition.addOrReplaceChild("front_right_leg",
-                CubeListBuilder.create()
-                        .texOffs(18, 22).addBox(-1.2F, 0.0F, 0.0F, 1.2F, 2.5F, 1.6F),
-                PartPose.offset(-2.8F, 21.5F, -3.8F));
+        PartDefinition tail = body.addOrReplaceChild("tail", CubeListBuilder.create(), PartPose.offset(-0.0083F, -1.5273F, 5.6631F));
 
-        partdefinition.addOrReplaceChild("back_left_leg",
-                CubeListBuilder.create()
-                        .texOffs(2, 24).addBox(0.0F, 0.0F, 0.0F, 1.2F, 3.0F, 1.8F),
-                PartPose.offset(2.8F, 21.0F, 5.85F));
+        PartDefinition tail_r1 = tail.addOrReplaceChild("tail_r1", CubeListBuilder.create().texOffs(26, 31).addBox(0.0F, -3.0F, -1.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 2.444F, 1.0702F, 0.3927F, 0.0F, 0.0F));
 
-        partdefinition.addOrReplaceChild("back_right_leg",
-                CubeListBuilder.create()
-                        .texOffs(0, 24).addBox(-1.2F, 0.0F, 0.0F, 1.2F, 3.0F, 1.8F),
-                PartPose.offset(-2.8F, 21.0F, 5.85F));
+        PartDefinition head = badger.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 31).addBox(-2.5F, -0.5359F, -3.775F, 5.0F, 2.0F, 4.0F, new CubeDeformation(0.0F))
+                .texOffs(18, 31).addBox(-1.0F, -0.5359F, -5.775F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -6.6483F, -4.5095F, 0.0873F, 0.0F, 0.0F));
 
-        return LayerDefinition.create(meshdefinition, 32, 32);
-    }
+        PartDefinition lefthear_r1 = head.addOrReplaceChild("lefthear_r1", CubeListBuilder.create().texOffs(22, 35).addBox(0.3946F, -1.2408F, 0.5584F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.25F, -0.5378F, -1.8185F, -0.0361F, -0.3911F, 0.0944F));
 
-    public ModelPart root() {
-        return root;
+        PartDefinition righthear_r1 = head.addOrReplaceChild("righthear_r1", CubeListBuilder.create().texOffs(18, 35).addBox(-1.3946F, -1.2408F, 0.5584F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.25F, -0.5378F, -1.8185F, -0.0361F, 0.3911F, -0.0944F));
+
+        PartDefinition frontleftleg = badger.addOrReplaceChild("frontleftleg", CubeListBuilder.create().texOffs(30, 35).addBox(-0.6F, -0.25F, -0.8F, 1.2F, 2.5F, 1.6F, new CubeDeformation(0.0F)), PartPose.offset(2.8F, -2.25F, -2.8F));
+
+        PartDefinition frontrightleg = badger.addOrReplaceChild("frontrightleg", CubeListBuilder.create().texOffs(34, 35).addBox(-0.6F, -0.25F, -0.8F, 1.2F, 2.5F, 1.6F, new CubeDeformation(0.0F)), PartPose.offset(-2.8F, -2.25F, -2.8F));
+
+        PartDefinition backrightleg = badger.addOrReplaceChild("backrightleg", CubeListBuilder.create().texOffs(30, 31).addBox(-0.6F, -0.5F, -0.9F, 1.2F, 3.0F, 1.8F, new CubeDeformation(0.0F)), PartPose.offset(-2.8F, -2.5F, 6.85F));
+
+        PartDefinition backleftleg = badger.addOrReplaceChild("backleftleg", CubeListBuilder.create().texOffs(34, 31).addBox(-0.6F, -0.5F, -0.9F, 1.2F, 3.0F, 1.8F, new CubeDeformation(0.0F)), PartPose.offset(2.8F, -2.5F, 6.85F));
+
+        return LayerDefinition.create(meshdefinition, 48, 48);
     }
 
     @Override
     public void setupAnim(T BadgerEntity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.root().getAllParts().forEach(ModelPart::resetPose);
+        this.m_142109_().getAllParts().forEach(ModelPart::resetPose);
+        //add the animation to rotate the head towards the player when he is nearby
         this.applyHeadRotation(netHeadYaw, headPitch);
+
+        this.animateWalk(BadgerAnimations.WALK, limbSwing, limbSwingAmount,2f,2.5f);
+        this.animate(entity.idleAnimationState,BadgerAnimations.IDLE,ageInTicks,1f);
     }
 
     private void applyHeadRotation(float pNetHeadYaw, float pNetHeadPitch) {
@@ -103,6 +93,12 @@ public class BadgerModel<T extends BadgerEntity> extends HierarchicalModel<T> {
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer,int packedLight,int packedOverlay, int color){
-        body.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+        badger.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+    }
+
+    @Override
+    //method root in the tutorial
+    public ModelPart m_142109_() {
+       return badger;
     }
 }
