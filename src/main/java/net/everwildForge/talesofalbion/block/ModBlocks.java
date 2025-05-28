@@ -1,7 +1,7 @@
 package net.everwildForge.talesofalbion.block;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
-import net.everwildForge.talesofalbion.block.custom.BlueBerruBushBlock;
+import net.everwildForge.talesofalbion.block.custom.BlueBerryBushBlock;
 import net.everwildForge.talesofalbion.block.custom.ModFlammableRotatedPillarBlock;
 import net.everwildForge.talesofalbion.block.custom.WattleAndDaubBlock;
 import net.everwildForge.talesofalbion.item.ModItems;
@@ -243,7 +243,7 @@ public class ModBlocks {
 
     //blueberry
     public static final RegistryObject<Block> BLUE_BERRY_BUSH = BLOCKS.register("blue_berry_bush",
-            () -> new BlueBerruBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+            () -> new BlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

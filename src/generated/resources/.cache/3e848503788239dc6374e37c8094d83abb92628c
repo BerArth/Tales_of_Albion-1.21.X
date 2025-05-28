@@ -1,4 +1,4 @@
-// 1.21	2025-05-26T14:06:41.2530151	Item Models: talesofalbion
+// 1.21	2025-05-27T13:26:51.829628	Item Models: talesofalbion
 d4d0dc292cdbf8c649ef16314a2f90a6ddfd2185 assets/talesofalbion/models/item/alder_button.json
 b89bfed4fec1472f4cbc2e8eb1ce74849ecb4b66 assets/talesofalbion/models/item/alder_door.json
 56fe680604a77537abb1a3f019a739ca2649a3fa assets/talesofalbion/models/item/alder_fence.json
@@ -12,6 +12,9 @@ f1e09baccf6684b4a409503a4360fbe950594b9d assets/talesofalbion/models/item/beech_
 be33e2e88923caabde9cd78c0f9c5360106f1cb5 assets/talesofalbion/models/item/daub_ball.json
 ab072d62820e43c35c4f86b4773694e015ab252c assets/talesofalbion/models/item/dried_peat.json
 b07e0fe7a40f0bc23a8f14b985b1b9dfba0c48de assets/talesofalbion/models/item/raw_silver.json
+e1f5c8cdda1b8cd365b242494f599f54049d8e06 assets/talesofalbion/models/item/silverinlaid_diamond_sword.json
+e3eeb6ec3caf2fef06d4554013eef86c0c2a8b93 assets/talesofalbion/models/item/silverinlaid_golden_sword.json
+d8bab7d000008edcad6c5054f062c1d2dc36f60e assets/talesofalbion/models/item/silverinlaid_iron_sword.json
 11442cd8f553cea4a81b2256381c56a174076d72 assets/talesofalbion/models/item/silver_ingot.json
 5a081015e779ddb408d18fa1c620eb53ea46c85f assets/talesofalbion/models/item/silver_nugget.json
 73955291e261268125cc0ee8f86a7fa6b1b0769b assets/talesofalbion/models/item/silver_pennig.json

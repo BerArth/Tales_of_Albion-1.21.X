@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class BlueBerruBushBlock extends SweetBerryBushBlock {
-    public BlueBerruBushBlock(Properties properties) {
+public class BlueBerryBushBlock extends SweetBerryBushBlock {
+    public BlueBerryBushBlock(Properties properties) {
         super(properties);
     }
 

@@ -2,7 +2,7 @@ package net.everwildForge.talesofalbion.datagen;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
-import net.everwildForge.talesofalbion.block.custom.BlueBerruBushBlock;
+import net.everwildForge.talesofalbion.block.custom.BlueBerryBushBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -134,8 +134,8 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
     private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlueBerruBushBlock.AGE),
-                ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID, "block/" + textureName + state.getValue(BlueBerruBushBlock.AGE))).renderType("cutout"));
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlueBerryBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID, "block/" + textureName + state.getValue(BlueBerryBushBlock.AGE))).renderType("cutout"));
 
         return models;
     }

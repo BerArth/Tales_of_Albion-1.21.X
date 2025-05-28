@@ -1,4 +1,4 @@
-// 1.21	2025-05-23T12:18:10.5345948	Loot Tables
+// 1.21	2025-05-27T13:26:51.8306281	Loot Tables
 209e8e45c702119381fca41b851473f80777ae30 data/talesofalbion/loot_table/blocks/alder_button.json
 92f861f11f58c0cdb24113868aba78ce01a8d637 data/talesofalbion/loot_table/blocks/alder_door.json
 b7927ec513f5989d593fe9265b17ad9a670b2a30 data/talesofalbion/loot_table/blocks/alder_fence.json
@@ -32,6 +32,8 @@ a9552afaa88be18b98ded6c37a6c9ee53d779e5e data/talesofalbion/loot_table/blocks/bl
 f2daa2e5bcca00a067984ca651c7c1c3c2c3f53a data/talesofalbion/loot_table/blocks/deepslate_silver_ore.json
 ae5eda9724754de0ce66fe4830c839eb0d50c496 data/talesofalbion/loot_table/blocks/dried_peat_block.json
 11dfe06611bf190e0eab739ec599d73a38371995 data/talesofalbion/loot_table/blocks/heather.json
+b2c03d76339435a40be83ee8bcd436a4ed4f5899 data/talesofalbion/loot_table/blocks/lattice_thatch_block.json
+ae99b0853b75013665156886f88a000f8cb50ad8 data/talesofalbion/loot_table/blocks/lattice_thatch_stairs.json
 7f51e495f3517c6419cfaa64fd7e7ac3a4596a67 data/talesofalbion/loot_table/blocks/peat_dirt.json
 40b1c83ab41a8e0f7c2dede743f73df018a878ce data/talesofalbion/loot_table/blocks/peat_grass.json
 6760f2b66ed8911a38daa6508a21bb21edef4103 data/talesofalbion/loot_table/blocks/raw_silver_block.json
@@ -42,6 +44,7 @@ f0310054180e818d04c5998495dd6cf7cc6f2e9c data/talesofalbion/loot_table/blocks/si
 f68c4038062806e2129c4e0ee62c0501d3aa6558 data/talesofalbion/loot_table/blocks/stripped_beech_log.json
 21bb4955c08c453897d23f4a61ef9e0c680558bf data/talesofalbion/loot_table/blocks/stripped_beech_wood.json
 b82081cf125004cdce9cf348eccb67f9e8c46907 data/talesofalbion/loot_table/blocks/thatch_block.json
+ee4699d8f870e3cdc5b7513f009337b2b92e4273 data/talesofalbion/loot_table/blocks/thatch_stairs.json
 a9acb926091c22a3f5bdfff89b8e8057de9ee708 data/talesofalbion/loot_table/blocks/wattle_n_daub_diagonal.json
 633744264e9ecca03bc85c15b316987a29e6f0e8 data/talesofalbion/loot_table/blocks/wattle_n_daub_framed.json
 5b54c5582f6cc21e1640bb5f858dbfe9ccdd3456 data/talesofalbion/loot_table/blocks/wattle_n_daub_plain.json

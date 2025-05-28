@@ -7,6 +7,7 @@ import net.everwildForge.talesofalbion.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -65,6 +66,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.SILVER_INGOT.get())
                 .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get())).save(recipeOutput);
 
+
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(ModItems.SILVER_INGOT.get()), RecipeCategory.MISC, ModItems.SILVER_PENNIG.get(), 1)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get())).save(recipeOutput);
+
+
+
+        //chalk
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHALK_STONE.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -173,10 +182,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.DRIED_PEAT.get()), has(ModItems.DRIED_PEAT.get())).save(recipeOutput);
 
 
-       SingleItemRecipeBuilder.stonecutting(
-               Ingredient.of(ModItems.SILVER_INGOT.get()), RecipeCategory.MISC, ModItems.SILVER_PENNIG.get(), 1)
-               .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get())).save(recipeOutput);
-
        //thatch
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.THATCH_BLOCK.get(), 2)
@@ -209,6 +214,34 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("TTT")
                 .define('T', ModBlocks.LATTICE_THATCH_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.THATCH_BLOCK.get()),has(ModBlocks.THATCH_BLOCK.get())).save(recipeOutput);
+
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(Items.AIR),
+                Ingredient.of(Items.IRON_SWORD),
+                Ingredient.of(ModItems.SILVER_INGOT.get()),
+                RecipeCategory.MISC,
+                ModItems.SILVERINLAID_IRON_SWORD.get())
+                .unlocks(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("talesofalbion", "silverinlaid_iron_sword_smithing"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(Items.AIR),
+                Ingredient.of(Items.GOLDEN_SWORD),
+                Ingredient.of(ModItems.SILVER_INGOT.get()),
+                RecipeCategory.MISC,
+                ModItems.SILVERINLAID_GOLDEN_SWORD.get())
+                .unlocks(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("talesofalbion", "silverinlaid_golden_sword_smithing"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(Items.AIR),
+                Ingredient.of(Items.DIAMOND_SWORD),
+                Ingredient.of(ModItems.SILVER_INGOT.get()),
+                RecipeCategory.MISC,
+                ModItems.SILVERINLAID_DIAMOND_SWORD.get())
+                .unlocks(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("talesofalbion", "silverinlaid_diamond_sword_smithing"));
+
     }
 
 

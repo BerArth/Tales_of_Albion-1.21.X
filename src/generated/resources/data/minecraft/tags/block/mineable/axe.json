@@ -1,6 +1,9 @@
 {
   "values": [
     "talesofalbion:thatch_block",
+    "talesofalbion:thatch_stairs",
+    "talesofalbion:lattice_thatch_block",
+    "talesofalbion:lattice_thatch_stairs",
     "#talesofalbion:alder_blocks",
     "talesofalbion:beech_log",
     "talesofalbion:beech_wood",

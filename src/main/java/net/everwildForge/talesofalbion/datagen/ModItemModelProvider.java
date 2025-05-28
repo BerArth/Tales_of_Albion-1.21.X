@@ -5,6 +5,7 @@ import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -41,9 +42,18 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.SILVER_PENNIG.get());
 
+        handheldItem(ModItems.SILVERINLAID_DIAMOND_SWORD);
+        handheldItem(ModItems.SILVERINLAID_IRON_SWORD);
+        handheldItem(ModItems.SILVERINLAID_GOLDEN_SWORD);
+
 
     }
 
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID,"item/" + item.getId().getPath()));
+    }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
