@@ -18,8 +18,7 @@ public class SilverSwordItem extends SwordItem {
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (target.getType() == EntityType.IRON_GOLEM) {
-            // Ajoute des dégâts bonus uniquement à l'Iron Golem
-            target.hurt(target.damageSources().mobAttack(attacker), damage); // ou plus selon ce que tu veux
+            target.hurt(target.damageSources().mobAttack(attacker), damage);
         }
 
         return super.hurtEnemy(stack, target, attacker);
