@@ -80,8 +80,10 @@ public class BadgerModel<T extends BadgerEntity> extends HierarchicalModel<T> {
         //add the animation to rotate the head towards the player when he is nearby
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        this.animateWalk(BadgerAnimations.WALK, limbSwing, limbSwingAmount,2f,2.5f);
-        this.animate(entity.idleAnimationState,BadgerAnimations.IDLE,ageInTicks,1f);
+        //method animate walk
+        this.m_267799_(BadgerAnimations.WALK, limbSwing, limbSwingAmount,2f,2.5f);
+        //method animate
+        this.m_233385_(entity.idleAnimationState,BadgerAnimations.IDLE,ageInTicks,1f);
     }
 
     private void applyHeadRotation(float pNetHeadYaw, float pNetHeadPitch) {
