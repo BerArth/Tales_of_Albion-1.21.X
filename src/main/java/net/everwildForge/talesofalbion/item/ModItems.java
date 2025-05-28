@@ -2,6 +2,7 @@ package net.everwildForge.talesofalbion.item;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.item.custom.SilverSwordItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,16 +38,16 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SILVERINLAID_IRON_SWORD = ITEMS.register("silverinlaid_iron_sword",
-            () -> new SwordItem(Tiers.IRON, new Item.Properties()
-                    .attributes(SwordItem.m_322253_(Tiers.IRON, 6, -1.6f))));
+            () -> new SilverSwordItem(Tiers.IRON, new Item.Properties()
+                    .attributes(SwordItem.m_322253_(Tiers.IRON, 6, -1.6f)), 100f));
 
     public static final RegistryObject<Item> SILVERINLAID_GOLDEN_SWORD = ITEMS.register("silverinlaid_golden_sword",
-            () -> new SwordItem(Tiers.GOLD, new Item.Properties()
-                    .attributes(SwordItem.m_322253_(Tiers.IRON, 4, -1.6f))));
+            () -> new SilverSwordItem(Tiers.GOLD, new Item.Properties()
+                    .attributes(SwordItem.m_322253_(Tiers.IRON, 4, -1.6f)), 10f));
 
     public static final RegistryObject<Item> SILVERINLAID_DIAMOND_SWORD = ITEMS.register("silverinlaid_diamond_sword",
-            () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
-                    .attributes(SwordItem.m_322253_(Tiers.IRON, 7, -1.6f))));
+            () -> new SilverSwordItem(Tiers.DIAMOND, new Item.Properties()
+                    .attributes(SwordItem.m_322253_(Tiers.IRON, 7, -1.6f)), 20f));
 
 
     public static void register(IEventBus eventBus)

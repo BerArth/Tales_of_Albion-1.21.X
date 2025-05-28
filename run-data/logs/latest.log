@@ -1,29 +1,29 @@
-[28mai2025 10:25:24.725] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\user\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, talesofalbion, --all, --output, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\generated\resources, --existing, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\main\resources]
-[28mai2025 10:25:24.728] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
-[28mai2025 10:25:24.730] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[28mai2025 10:25:24.847] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[28mai2025 10:25:24.949] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/user/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[28mai2025 10:25:25.787] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[28mai2025 10:25:26.725] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\user\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, talesofalbion, --all, --output, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\generated\resources, --existing, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\main\resources]
-[28mai2025 10:25:32.231] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[28mai2025 10:25:32.231] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[28mai2025 10:25:32.264] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[28mai2025 10:25:32.845] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [talesofalbion]
-[28mai2025 10:25:32.933] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/user/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[28mai2025 10:25:32.933] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/user/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[28mai2025 10:25:33.105] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[28mai2025 10:25:33.357] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 250 ms
-[28mai2025 10:25:33.357] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[28mai2025 10:25:33.478] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 120 ms
-[28mai2025 10:25:33.478] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id talesofalbion
-[28mai2025 10:25:33.521] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id talesofalbion finished after 42 ms
-[28mai2025 10:25:33.522] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id talesofalbion
-[28mai2025 10:25:33.524] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id talesofalbion finished after 2 ms
-[28mai2025 10:25:33.525] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: talesofalbion
-[28mai2025 10:25:33.555] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: talesofalbion finished after 29 ms
-[28mai2025 10:25:33.555] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: talesofalbion
-[28mai2025 10:25:33.733] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: talesofalbion finished after 178 ms
-[28mai2025 10:25:33.733] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[28mai2025 10:25:33.751] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 17 ms
-[28mai2025 10:25:33.751] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 646 ms
-[28mai2025 10:25:33.768] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 354, old count: 348, new count: 353, removed stale: 2, written: 6
+[28mai2025 15:59:32.244] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\user\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, talesofalbion, --all, --output, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\generated\resources, --existing, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\main\resources]
+[28mai2025 15:59:32.246] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[28mai2025 15:59:32.247] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[28mai2025 15:59:32.346] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[28mai2025 15:59:32.429] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/user/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[28mai2025 15:59:33.190] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[28mai2025 15:59:33.876] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\user\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, talesofalbion, --all, --output, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\generated\resources, --existing, C:\Users\user\Desktop\Tales_of_Albion-1.21.X\src\main\resources]
+[28mai2025 15:59:38.546] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[28mai2025 15:59:38.546] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[28mai2025 15:59:38.579] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[28mai2025 15:59:39.124] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [talesofalbion]
+[28mai2025 15:59:39.197] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/user/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[28mai2025 15:59:39.198] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/user/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.04.19-1.21.5-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[28mai2025 15:59:39.390] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[28mai2025 15:59:39.533] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 141 ms
+[28mai2025 15:59:39.533] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[28mai2025 15:59:39.617] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 84 ms
+[28mai2025 15:59:39.618] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id talesofalbion
+[28mai2025 15:59:39.652] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id talesofalbion finished after 33 ms
+[28mai2025 15:59:39.652] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id talesofalbion
+[28mai2025 15:59:39.654] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id talesofalbion finished after 2 ms
+[28mai2025 15:59:39.655] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: talesofalbion
+[28mai2025 15:59:39.676] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: talesofalbion finished after 20 ms
+[28mai2025 15:59:39.676] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: talesofalbion
+[28mai2025 15:59:39.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: talesofalbion finished after 138 ms
+[28mai2025 15:59:39.814] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[28mai2025 15:59:39.825] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 10 ms
+[28mai2025 15:59:39.825] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 435 ms
+[28mai2025 15:59:39.834] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 352, old count: 352, new count: 353, removed stale: 0, written: 0
