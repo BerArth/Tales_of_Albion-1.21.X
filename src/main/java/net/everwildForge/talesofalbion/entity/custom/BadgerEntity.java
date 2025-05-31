@@ -23,6 +23,7 @@ import javax.annotation.Nullable;
 public class BadgerEntity extends Animal {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    private boolean agitated = false;
 
     public BadgerEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType,pLevel);
@@ -33,26 +34,27 @@ public class BadgerEntity extends Animal {
         //Les goals sont les actions que vont chercher à effectuer les mobs.
         //La priorité 0 est LA chose priorisée avant tout dès qu'elle est possible
         this.goalSelector.addGoal(0,new FloatGoal(this));
-        this.goalSelector.addGoal(1,new PanicGoal(this,2.0));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.25D));
         //chnger wheat pour blueberry
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(Items.WHEAT), false));
 
+
         this.goalSelector.addGoal(3, new AvoidEntityGoal<Villager>(this, Villager.class, 6.0F, 1.0D, 1.5D));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25));
-        this.goalSelector.addGoal(5,new LookAtPlayerGoal(this, Player.class, 5.0F));
+        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 5.0F));
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0D));
     }
 
     public static AttributeSupplier.Builder createAttributes(){
         return Animal.createMobAttributes()
                 //Les attributs sont très nombreux, se référer à Sam pour les attributs à renseigner
                 .add(Attributes.MAX_HEALTH,10.0D)
-                .add(Attributes.MOVEMENT_SPEED,1.0D)
+                .add(Attributes.MOVEMENT_SPEED,0.2D)
                 .add(Attributes.ARMOR,1.0D)
                 .add(Attributes.FOLLOW_RANGE,10.0D)
-                .add(Attributes.ATTACK_DAMAGE,5.0D)
-                .add(Attributes.ATTACK_SPEED,6.0D)
-                .add(Attributes.JUMP_STRENGTH,5.0D)
+                .add(Attributes.ATTACK_DAMAGE,3.0D)
+                .add(Attributes.ATTACK_SPEED,3.0D)
                 ;
     }
 
@@ -79,7 +81,7 @@ public class BadgerEntity extends Animal {
         else {
             //idleAnimationTimeout doit être égal à la durée de l'animation (en vingtième de secondes)
             //ici idleAnimationTimeout = 20 -> l'animation dure 1 seconde
-            this.idleAnimationTimeout = 20;
+            this.idleAnimationTimeout = 80;
             this.idleAnimationState.start(this.tickCount);
         }
     }
