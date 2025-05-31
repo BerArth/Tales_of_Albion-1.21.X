@@ -13,8 +13,6 @@ public class BadgerRenderer extends MobRenderer<BadgerEntity, BadgerModel<Badger
         super(pContext, new BadgerModel<>(pContext.bakeLayer(BadgerModel.LAYER_LOCATION)), 0.3f);
     }
 
-    /***/
-
     @Override
     public ResourceLocation createRenderState(BadgerEntity pEntity) {
         return ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID,"textures/entity/badger/badger.png");
