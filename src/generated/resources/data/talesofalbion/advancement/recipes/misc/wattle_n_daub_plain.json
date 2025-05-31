@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_daub_ball": {
+    "has_chalk_powder": {
       "conditions": {
         "items": [
           {
-            "items": "talesofalbion:daub_ball"
+            "items": "talesofalbion:chalk_powder"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_daub_ball"
+      "has_chalk_powder"
     ]
   ],
   "rewards": {

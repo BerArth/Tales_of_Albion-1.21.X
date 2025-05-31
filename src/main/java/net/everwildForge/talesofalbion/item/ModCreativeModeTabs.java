@@ -44,6 +44,12 @@ public class ModCreativeModeTabs {
 
                     })).build());
 
+    public static final RegistryObject<CreativeModeTab> TOA_ANIMALS_TABS = CREATIVE_MODE_TABS.register("toa_spawn_eggs_tab",
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.BADGER_SPAWN_EGG.get()))
+                    .displayItems(((pParameters, pOutput) -> {
+                        pOutput.accept(new ItemStack(ModItems.BADGER_SPAWN_EGG.get()));
+                    })).build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

@@ -47,6 +47,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SILVERINLAID_GOLDEN_SWORD);
 
 
+        withExistingParent(ModItems.BADGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
