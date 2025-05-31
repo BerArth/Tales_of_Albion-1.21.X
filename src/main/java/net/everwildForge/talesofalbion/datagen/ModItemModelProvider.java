@@ -36,6 +36,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.BEECH_SAPLING);
 
 
+        withExistingParent(ModItems.BADGER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+
     }
 
 

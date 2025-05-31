@@ -5,6 +5,7 @@
   "item.talesofalbion.silver_nugget": "Silver Nugget",
   "item.talesofalbion.daub_ball": "Daub Ball",
   "item.talesofalbion.chalk_powder": "Chalk Powder",
+  "item.talesofalbion.badger_spawn_egg": "Badger Egg",
 
   "block.talesofalbion.silver_block": "Block of Silver",
   "block.talesofalbion.silver_ore": "Silver Ore",
@@ -47,5 +48,8 @@
 
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",
-  "creativetab.talesofalbion.silver_blocks" : "Silver Blocks"
+  "creativetab.talesofalbion.silver_blocks" : "Silver Blocks",
+  "creativetab.talesofalbion.toa_spawn_eggs_tab" : "Albion entity eggs",
+  "entity.talesofalbion.badger" : "Badger"
+
 }

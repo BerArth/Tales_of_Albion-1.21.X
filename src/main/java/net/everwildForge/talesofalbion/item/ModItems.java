@@ -2,8 +2,10 @@ package net.everwildForge.talesofalbion.item;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
+import net.everwildForge.talesofalbion.entity.ModEntities;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,6 +31,10 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.HEATHER.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CHALK_POWDER = ITEMS.register("chalk_powder", () -> new Item(new Item.Properties()));
+
+    //Animals eggs
+    public static final RegistryObject<Item> BADGER_SPAWN_EGG = ITEMS.register("badger_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.BADGER,0xa09784,0x2a2a2a,new Item.Properties()));
 
 
     public static void register(IEventBus eventBus)
