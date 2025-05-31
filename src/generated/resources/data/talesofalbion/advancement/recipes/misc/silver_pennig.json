@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_daub_ball": {
+    "has_silver_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "talesofalbion:daub_ball"
+            "items": "talesofalbion:silver_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "talesofalbion:wattle_n_daub_plain"
+        "recipe": "talesofalbion:silver_pennig"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_daub_ball"
+      "has_silver_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "talesofalbion:wattle_n_daub_plain"
+      "talesofalbion:silver_pennig"
     ]
   }
 }

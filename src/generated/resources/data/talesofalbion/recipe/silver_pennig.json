@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "talesofalbion:silver_ingot"
+  },
+  "result": {
+    "count": 1,
+    "id": "talesofalbion:silver_pennig"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_daub_ball": {
+    "has_hay_block": {
       "conditions": {
         "items": [
           {
-            "items": "talesofalbion:daub_ball"
+            "items": "minecraft:hay_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "talesofalbion:wattle_n_daub_plain"
+        "recipe": "talesofalbion:thatch_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_daub_ball"
+      "has_hay_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "talesofalbion:wattle_n_daub_plain"
+      "talesofalbion:thatch_block"
     ]
   }
 }
