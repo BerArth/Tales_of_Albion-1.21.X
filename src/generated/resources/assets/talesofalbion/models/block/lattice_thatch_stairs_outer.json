@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "talesofalbion:block/thatch_block",
+    "side": "talesofalbion:block/lattice_thatch_block",
+    "top": "talesofalbion:block/thatch_block"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "talesofalbion:silver_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "talesofalbion:silverinlaid_diamond_sword"
+  },
+  "template": []
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "talesofalbion:thatch_block"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "STS",
+    "STS"
+  ],
+  "result": {
+    "count": 2,
+    "id": "talesofalbion:lattice_thatch_block"
+  }
+}
