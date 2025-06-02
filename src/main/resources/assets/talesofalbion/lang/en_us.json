@@ -12,6 +12,7 @@
   "item.talesofalbion.silverinlaid_diamond_sword": "Silver Inlaid Diamond Sword",
 
   "item.talesofalbion.blue_berries": "Blue Berries",
+  "item.talesofalbion.badger_spawn_egg": "Badger Egg",
 
   "block.talesofalbion.silver_block": "Block of Silver",
   "block.talesofalbion.silver_ore": "Silver Ore",
@@ -45,11 +46,21 @@
 
   "block.talesofalbion.beech_leaves": "Beech Leaves",
   "block.talesofalbion.beech_log": "Beech Log",
-  "block.talesofalbion.beech_planks": "Beech Planks",
   "block.talesofalbion.beech_sapling": "Beech Sapling",
   "block.talesofalbion.beech_wood": "Beech Wood",
   "block.talesofalbion.stripped_beech_log": "Stripped Beech Log",
   "block.talesofalbion.stripped_beech_wood": "Stripped Beech Wood",
+
+  "block.talesofalbion.beech_planks": "Beech Planks",
+  "block.talesofalbion.beech_stairs": "Beech Stairs",
+  "block.talesofalbion.beech_slab": "Beech Slab",
+  "block.talesofalbion.beech_pressure_plate": "Beech Pressure Plate",
+  "block.talesofalbion.beech_button": "Beech Button",
+  "block.talesofalbion.beech_fence_gate": "Beech Fence Gate",
+  "block.talesofalbion.beech_fence": "Beech Fence",
+  "block.talesofalbion.beech_door": "Beech Door",
+  "block.talesofalbion.beech_trapdoor": "Beech Trapdoor",
+
   "block.talesofalbion.wattle_n_daub_diagonal": "Wattle n' Daub Diagonal",
   "block.talesofalbion.wattle_n_daub_framed": "Wattle n' Daub Framed",
   "block.talesofalbion.wattle_n_daub_plain": "Wattle n' Daub Plain",
@@ -63,5 +74,8 @@
 
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",
-  "creativetab.talesofalbion.silver_blocks" : "Silver Blocks"
+  "creativetab.talesofalbion.silver_blocks" : "Silver Blocks",
+  "creativetab.talesofalbion.toa_spawn_eggs_tab" : "Albion entity eggs",
+  "entity.talesofalbion.badger" : "Badger"
+
 }
