@@ -141,6 +141,8 @@ public class TalesofAlbion
 
             event.accept(ModBlocks.PEAT_DIRT);
             event.accept(ModBlocks.PEAT_GRASS);
+            event.accept(ModBlocks.CUSTOM_CAKE);
+
         }
     }
 

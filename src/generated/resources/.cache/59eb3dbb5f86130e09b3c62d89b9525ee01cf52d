@@ -1,4 +1,4 @@
-// 1.21	2025-05-27T13:26:51.8306281	Loot Tables
+// 1.21	2025-06-02T15:11:44.222399	Loot Tables
 209e8e45c702119381fca41b851473f80777ae30 data/talesofalbion/loot_table/blocks/alder_button.json
 92f861f11f58c0cdb24113868aba78ce01a8d637 data/talesofalbion/loot_table/blocks/alder_door.json
 b7927ec513f5989d593fe9265b17ad9a670b2a30 data/talesofalbion/loot_table/blocks/alder_fence.json
@@ -29,6 +29,7 @@ a9552afaa88be18b98ded6c37a6c9ee53d779e5e data/talesofalbion/loot_table/blocks/bl
 3d57197e6bec8d7657ec9d1cf8353b77aa9ea6da data/talesofalbion/loot_table/blocks/chalk_block.json
 039e8949b5ecb30e63aa60110e9a52ef8667d499 data/talesofalbion/loot_table/blocks/chalk_stone.json
 93b9ce234f994bb554b24669bd83a970d09e06d8 data/talesofalbion/loot_table/blocks/chalk_stone_bricks.json
+b12d4c7f90a70e911f7163261e4f763fa094938d data/talesofalbion/loot_table/blocks/custom_cake.json
 f2daa2e5bcca00a067984ca651c7c1c3c2c3f53a data/talesofalbion/loot_table/blocks/deepslate_silver_ore.json
 ae5eda9724754de0ce66fe4830c839eb0d50c496 data/talesofalbion/loot_table/blocks/dried_peat_block.json
 11dfe06611bf190e0eab739ec599d73a38371995 data/talesofalbion/loot_table/blocks/heather.json

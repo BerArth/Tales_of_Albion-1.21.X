@@ -3,12 +3,10 @@ package net.everwildForge.talesofalbion.datagen;
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.block.custom.BlueBerryBushBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -124,6 +122,50 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DRIED_PEAT_BLOCK);
 
         makeBush(((SweetBerryBushBlock) ModBlocks.BLUE_BERRY_BUSH.get()), "blue_berry_bush_stage","blue_berry_bush_stage");
+
+        cakeWithTextures(ModBlocks.CUSTOM_CAKE.get(),
+                modLoc("block/chalk"),
+                modLoc("block/silver_ore"),
+                modLoc("block/alder_log"),
+                modLoc("block/thatch_block")
+        );
+    }
+
+    private void cakeWithTextures(Block block, ResourceLocation bottom, ResourceLocation top, ResourceLocation side, ResourceLocation inner) {
+        for (int i = 0; i <= 6; i++) {
+            String suffix = "_slice" + i;
+            String modelName = ForgeRegistries.BLOCKS.getKey(block).getPath() + suffix;
+
+            int xStart = switch (i) {
+                case 0 -> 1;
+                case 1 -> 3;
+                case 2 -> 5;
+                case 3 -> 7;
+                case 4 -> 9;
+                case 5 -> 11;
+                case 6 -> 13;
+                default -> 1;
+            };
+
+            ModelFile model = models().withExistingParent(modelName, mcLoc("block/block"))
+                    .texture("top", top)
+                    .texture("bottom", bottom)
+                    .texture("side", side)
+                    .texture("inside", inner)
+                    .element()
+                    .from(xStart, 0, 1).to(15, 8, 15)
+                    .face(Direction.UP).texture("#top").end()
+                    .face(Direction.DOWN).texture("#bottom").end()
+                    .face(Direction.NORTH).texture("#side").end()
+                    .face(Direction.SOUTH).texture("#side").end()
+                    .face(Direction.WEST).texture("#side").end()
+                    .face(Direction.EAST).texture(i == 0 ? "#side" : "#inside").end()
+                    .end();
+
+            getVariantBuilder(block)
+                    .partialState().with(CakeBlock.BITES, i)
+                    .modelForState().modelFile(model).addModel();
+        }
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
