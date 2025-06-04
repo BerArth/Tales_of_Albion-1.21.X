@@ -42,6 +42,27 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> REED = registerBlock("reed",
+            () -> new SugarCaneBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)));
+    // ── AJOUT DU BLOC WATTLE ──
+    public static final RegistryObject<Block> WATTLE = registerBlock("wattle",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .strength(2f)              // même dureté qu’une barrière normale
+                    .sound(SoundType.WOOD)     // son “bois”
+            )
+    );
+    public static final RegistryObject<Block> GOOSE_BARNACLE = registerBlock("goose_barnacle",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .lightLevel(state -> 3)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)));
+
     //Wattlendaub
     public static final RegistryObject<Block> WATTLE_N_DAUB_PLAIN = registerBlock("wattle_n_daub_plain",
             () -> new WattleAndDaubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
