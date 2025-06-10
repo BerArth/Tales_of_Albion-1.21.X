@@ -10,12 +10,15 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 
 public class RedDeerMModel<T extends RedDeerMEntity> extends HierarchicalModel<T> {
 
     public static final ModelLayerLocation LAYER_LOCATION =
-            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID, "reddeer"), "main");
+            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TalesofAlbion.MOD_ID, "reddeerm"), "main");
 
     private final ModelPart deer;
     private final ModelPart body;
@@ -57,8 +60,44 @@ public class RedDeerMModel<T extends RedDeerMEntity> extends HierarchicalModel<T
 
 
     public RedDeerMModel(ModelPart root) {
+        super(RenderType::entityCutout);
+        this.deer = root.getChild("deer");
         this.body = this.deer.getChild("body");
+        this.torso = this.body.getChild("torso");
+        this.rightlegfront = this.deer.getChild("rightlegfront");
+        this.leftlegfront = this.deer.getChild("leftlegfront");
+        this.rightlegback = this.deer.getChild("rightlegback");
+        this.leftlegback = this.deer.getChild("leftlegback");
+        this.neckhead = this.deer.getChild("neckhead");
+        this.neck = this.neckhead.getChild("neck");
+        this.skull = this.neckhead.getChild("skull");
         this.head = this.skull.getChild("head");
+        this.jaw = this.head.getChild("jaw");
+        this.rightear = this.head.getChild("rightear");
+        this.leftear = this.head.getChild("leftear");
+        this.rightantler = this.skull.getChild("rightantler");
+        this.base = this.rightantler.getChild("base");
+        this.mid = this.rightantler.getChild("mid");
+        this.stub = this.rightantler.getChild("stub");
+        this.stub2 = this.rightantler.getChild("stub2");
+        this.stub3 = this.rightantler.getChild("stub3");
+        this.end = this.rightantler.getChild("end");
+        this.stub4 = this.rightantler.getChild("stub4");
+        this.leftantler = this.skull.getChild("leftantler");
+        this.base2 = this.leftantler.getChild("base2");
+        this.deer_sub_23 = this.base2.getChild("deer_sub_23");
+        this.mid2 = this.leftantler.getChild("mid2");
+        this.deer_sub_25 = this.mid2.getChild("deer_sub_25");
+        this.stub5 = this.leftantler.getChild("stub5");
+        this.deer_sub_27 = this.stub5.getChild("deer_sub_27");
+        this.stub6 = this.leftantler.getChild("stub6");
+        this.deer_sub_29 = this.stub6.getChild("deer_sub_29");
+        this.stub7 = this.leftantler.getChild("stub7");
+        this.deer_sub_31 = this.stub7.getChild("deer_sub_31");
+        this.end2 = this.leftantler.getChild("end2");
+        this.deer_sub_33 = this.end2.getChild("deer_sub_33");
+        this.stub8 = this.leftantler.getChild("stub8");
+        this.deer_sub_35 = this.stub8.getChild("deer_sub_35");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -146,13 +185,34 @@ public class RedDeerMModel<T extends RedDeerMEntity> extends HierarchicalModel<T
     }
 
     @Override
-    public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(RedDeerMEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        this.m_142109_().getAllParts().forEach(ModelPart::resetPose);
+        //add the animation to rotate the head towards the player when he is nearby
+        this.applyHeadRotation(netHeadYaw, headPitch);
 
+        //method animate walk
+        this.m_267799_(RedDeerMAnimations.walk, limbSwing, limbSwingAmount,2f,2f);
+        //method animate.3
+        this.m_233385_(entity.idleAnimationState,RedDeerMAnimations.idle,ageInTicks,1f);
+    }
+
+    private void applyHeadRotation(float pNetHeadYaw, float pNetHeadPitch) {
+        pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30f, 30f);
+        pNetHeadPitch = Mth.clamp(pNetHeadPitch, -25f, 45f);
+        this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180f);
+        this.head.xRot = pNetHeadPitch * ((float)Math.PI / 180f);
     }
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        deer.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer,int packedLight,int packedOverlay, int color){
+        deer.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
     }
+
+    @Override
+    public ModelPart m_142109_() {
+        return deer;
+    }
+
+
 
 }

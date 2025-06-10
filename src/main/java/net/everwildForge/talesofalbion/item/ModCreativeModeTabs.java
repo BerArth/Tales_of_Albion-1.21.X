@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.BADGER_SPAWN_EGG.get()))
                     .displayItems(((pParameters, pOutput) -> {
                         pOutput.accept(new ItemStack(ModItems.BADGER_SPAWN_EGG.get()));
+                        pOutput.accept(new ItemStack(ModItems.RED_DEER_SPAWN_EGG.get()));
                     })).build());
 
     public static void register(IEventBus eventBus) {

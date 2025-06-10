@@ -18,9 +18,9 @@ public class ModEntities {
             ENTITY_TYPES.register("badger",()-> EntityType.Builder.of(BadgerEntity::new, MobCategory.CREATURE)
                     .sized(1.5f,1.5f).build("badger"));
 
-    public static final RegistryObject<EntityType<RedDeerMEntity>> RED_DEER =
-            ENTITY_TYPES.register("red_deer",()-> EntityType.Builder.of(RedDeerMEntity::new, MobCategory.CREATURE)
-                    .sized(1.5f,1.5f).build("red_deer"));
+    public static final RegistryObject<EntityType<RedDeerMEntity>> REDDEERM  =
+            ENTITY_TYPES.register("reddeerm",()-> EntityType.Builder.of(RedDeerMEntity::new, MobCategory.CREATURE)
+                    .sized(1.5f,1.5f).build("reddeerm"));
 
 
     public static void register(IEventBus eventBus) {

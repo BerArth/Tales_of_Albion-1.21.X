@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.entity.ModEntities;
 import net.everwildForge.talesofalbion.entity.client.BadgerRenderer;
+import net.everwildForge.talesofalbion.entity.client.RedDeerMModel;
+import net.everwildForge.talesofalbion.entity.client.RedDeerMRenderer;
 import net.everwildForge.talesofalbion.entity.custom.BadgerEntity;
 import net.everwildForge.talesofalbion.item.ModCreativeModeTabs;
 import net.everwildForge.talesofalbion.item.ModItems;
@@ -12,6 +14,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -161,6 +164,7 @@ public class TalesofAlbion
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HEATHER.get(), RenderType.cutout());
             //Register Mobs here :
             EntityRenderers.register(ModEntities.BADGER.get(), BadgerRenderer::new);
+            EntityRenderers.register(ModEntities.REDDEERM.get(), RedDeerMRenderer::new);
         }
     }
 }
