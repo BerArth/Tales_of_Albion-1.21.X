@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class BadgerRenderer extends MobRenderer<BadgerEntity, BadgerModel<BadgerEntity>> {
+
     public BadgerRenderer(EntityRendererProvider.Context pContext) {
         super(pContext, new BadgerModel<>(pContext.bakeLayer(BadgerModel.LAYER_LOCATION)), 0.3f);
     }
