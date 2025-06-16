@@ -31,6 +31,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
         blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
         blockWithItem(ModBlocks.THATCH_BLOCK);
+        blockWithItem(ModBlocks.OLDWOOD_VERTICAL_PLANKS);
         stairsBlock(ModBlocks.THATCH_STAIRS.get(), blockTexture(ModBlocks.THATCH_BLOCK.get()));
         blockItem(ModBlocks.THATCH_STAIRS);
         blockWithItem(ModBlocks.LATTICE_THATCH_BLOCK, "thatch_block", "thatch_block", "lattice_thatch_block");

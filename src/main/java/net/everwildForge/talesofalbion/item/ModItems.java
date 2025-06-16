@@ -57,8 +57,10 @@ public class ModItems {
     public static final RegistryObject<Item> BADGER_SPAWN_EGG = ITEMS.register("badger_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.BADGER,0xa09784,0x2a2a2a,new Item.Properties()));
 
-    public static final RegistryObject<Item> RED_DEER_SPAWN_EGG = ITEMS.register("red_deer_spawn_egg",
+    public static final RegistryObject<Item> RED_DEER_MALE_SPAWN_EGG = ITEMS.register("red_deer_male_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.REDDEERM,0xa09751,0x47a2a2,new Item.Properties()));
+ public static final RegistryObject<Item> RED_DEER_FEMALE_SPAWN_EGG = ITEMS.register("red_deer_female_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.REDDEERF,0xa09751,0x48a2a2,new Item.Properties()));
 
 
     public static void register(IEventBus eventBus)

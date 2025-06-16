@@ -4,9 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.everwildForge.talesofalbion.block.ModBlocks;
 import net.everwildForge.talesofalbion.entity.ModEntities;
 import net.everwildForge.talesofalbion.entity.client.BadgerRenderer;
-import net.everwildForge.talesofalbion.entity.client.RedDeerMModel;
+import net.everwildForge.talesofalbion.entity.client.RedDeerFRenderer;
 import net.everwildForge.talesofalbion.entity.client.RedDeerMRenderer;
-import net.everwildForge.talesofalbion.entity.custom.BadgerEntity;
 import net.everwildForge.talesofalbion.item.ModCreativeModeTabs;
 import net.everwildForge.talesofalbion.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -125,6 +124,8 @@ public class TalesofAlbion
             event.accept(ModBlocks.BEECH_FENCE_GATE);
             event.accept(ModBlocks.BEECH_DOOR);
             event.accept(ModBlocks.BEECH_TRAP_DOOR);
+
+            event.accept(ModBlocks.OLDWOOD_VERTICAL_PLANKS);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
@@ -165,6 +166,7 @@ public class TalesofAlbion
             //Register Mobs here :
             EntityRenderers.register(ModEntities.BADGER.get(), BadgerRenderer::new);
             EntityRenderers.register(ModEntities.REDDEERM.get(), RedDeerMRenderer::new);
+            EntityRenderers.register(ModEntities.REDDEERF.get(), RedDeerFRenderer::new);
         }
     }
 }

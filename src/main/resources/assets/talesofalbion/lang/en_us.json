@@ -13,7 +13,8 @@
 
   "item.talesofalbion.blue_berries": "Blue Berries",
   "item.talesofalbion.badger_spawn_egg": "Badger Egg",
-  "item.talesofalbion.red_deer_spawn_egg": "Red Deer Egg",
+  "item.talesofalbion.red_deer_male_spawn_egg": "Red Deer Male Egg",
+  "item.talesofalbion.red_deer_female_spawn_egg": "Red Deer Female Egg",
 
   "block.talesofalbion.silver_block": "Block of Silver",
   "block.talesofalbion.silver_ore": "Silver Ore",
@@ -72,6 +73,7 @@
   "block.talesofalbion.dried_peat_block": "Dried Peat Block",
 
   "block.talesofalbion.blue_berry_bush": "Blue Berry Bush",
+  "block.talesofalbion.oldwood_vertical_planks": "Old Wood Vertical Planks",
 
 
   "creativetab.talesofalbion.silver_items" : "Silver Items",

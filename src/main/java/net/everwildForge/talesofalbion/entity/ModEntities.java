@@ -2,6 +2,7 @@ package net.everwildForge.talesofalbion.entity;
 
 import net.everwildForge.talesofalbion.TalesofAlbion;
 import net.everwildForge.talesofalbion.entity.custom.BadgerEntity;
+import net.everwildForge.talesofalbion.entity.custom.RedDeerFEntity;
 import net.everwildForge.talesofalbion.entity.custom.RedDeerMEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -21,6 +22,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<RedDeerMEntity>> REDDEERM  =
             ENTITY_TYPES.register("reddeerm",()-> EntityType.Builder.of(RedDeerMEntity::new, MobCategory.CREATURE)
                     .sized(1.5f,1.5f).build("reddeerm"));
+
+    public static final RegistryObject<EntityType<RedDeerFEntity>> REDDEERF  =
+            ENTITY_TYPES.register("reddeerf",()-> EntityType.Builder.of(RedDeerFEntity::new, MobCategory.CREATURE)
+                    .sized(1.5f,1.5f).build("reddeerf"));
 
 
     public static void register(IEventBus eventBus) {
