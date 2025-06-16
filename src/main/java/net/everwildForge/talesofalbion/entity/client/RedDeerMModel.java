@@ -193,14 +193,22 @@ public class RedDeerMModel<T extends RedDeerMEntity> extends HierarchicalModel<T
         //method animate walk
         this.m_267799_(RedDeerMAnimations.walk, limbSwing, limbSwingAmount,2f,2f);
         //method animate.3
-        this.m_233385_(entity.idleAnimationState,RedDeerMAnimations.idle,ageInTicks,1f);
+        if(entity.eatAnimationState.isStarted()){
+            this.m_233385_(entity.eatAnimationState,RedDeerMAnimations.eat,ageInTicks,1f);
+            System.out.println("----------------------------start eat anim-------------------------------------------");
+        }
+        if(entity.idleAnimationState.isStarted()){
+            System.out.println("----------------------------start idle anim-------------------------------------------");
+            this.m_233385_(entity.idleAnimationState,RedDeerMAnimations.idle,ageInTicks,1f);
+
+        }
     }
 
     private void applyHeadRotation(float pNetHeadYaw, float pNetHeadPitch) {
         pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30f, 30f);
         pNetHeadPitch = Mth.clamp(pNetHeadPitch, -25f, 45f);
-        this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180f);
-        this.head.xRot = pNetHeadPitch * ((float)Math.PI / 180f);
+        this.skull.yRot = pNetHeadYaw * ((float)Math.PI / 180f);
+        this.skull.xRot = pNetHeadPitch * ((float)Math.PI / 180f);
     }
 
     @Override

@@ -246,7 +246,7 @@ public class ModBlocks {
             () -> new BlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     public static final RegistryObject<Block> OLDWOOD_VERTICAL_PLANKS = registerBlock("oldwood_vertical_planks",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+            () -> new Block(BlockBehaviour.Properties.of().strength(2.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

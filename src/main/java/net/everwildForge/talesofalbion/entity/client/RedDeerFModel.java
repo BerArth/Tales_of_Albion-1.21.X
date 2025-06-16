@@ -98,8 +98,8 @@ public class RedDeerFModel<T extends RedDeerFEntity> extends HierarchicalModel<T
     private void applyHeadRotation(float pNetHeadYaw, float pNetHeadPitch) {
         pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30f, 30f);
         pNetHeadPitch = Mth.clamp(pNetHeadPitch, -25f, 45f);
-        this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180f);
-        this.head.xRot = pNetHeadPitch * ((float)Math.PI / 180f);
+        this.skull.yRot = pNetHeadYaw * ((float)Math.PI / 180f);
+        this.skull.xRot = pNetHeadPitch * ((float)Math.PI / 180f);
     }
 
     @Override

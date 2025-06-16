@@ -26,7 +26,8 @@ public class RedDeerFEntity extends Animal{
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
+        this.goalSelector.addGoal(1, new EatBlockGoal(this));
+        //this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(Items.WHEAT), false));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.25));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
