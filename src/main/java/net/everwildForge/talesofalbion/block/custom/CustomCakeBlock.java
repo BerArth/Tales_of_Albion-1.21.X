@@ -83,6 +83,10 @@ public class CustomCakeBlock extends Block {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState p_331745_, Level p_334119_, BlockPos p_330552_, Player p_332095_, BlockHitResult p_329702_) {
+        /**
+         * If cake in hand && cake not food -> remove n cake from hand and add n to cake block
+         * if anything else but cake -> put n cake in inventory && remove n from cake block
+         * */
         if (p_334119_.isClientSide) {
             if (eat(p_334119_, p_330552_, p_331745_, p_332095_).consumesAction()) {
                 return InteractionResult.SUCCESS;
@@ -92,7 +96,6 @@ public class CustomCakeBlock extends Block {
                 return InteractionResult.CONSUME;
             }
         }
-
         return eat(p_334119_, p_330552_, p_331745_, p_332095_);
     }
 
