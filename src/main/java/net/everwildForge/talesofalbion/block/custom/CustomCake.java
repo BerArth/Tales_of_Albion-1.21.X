@@ -18,7 +18,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -29,8 +28,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import static net.everwildForge.talesofalbion.block.custom.CustomCake.f_51181_;
-
 /**
  * CustomCakeBlock extends the default Block class to implement cake behavior:
  * - Track bites taken with a BITES property.
@@ -38,27 +35,33 @@ import static net.everwildForge.talesofalbion.block.custom.CustomCake.f_51181_;
  * - Allow eating slices of cake.
  * - Provide redstone signal strength based on remaining cake.
  */
-public class CustomCakeBlock extends Block {
+public class CustomCake extends Block {
     // Used for serialization; refers to base CakeBlock codec
-    public static final MapCodec<net.minecraft.world.level.block.CakeBlock> CODEC = simpleCodec(net.minecraft.world.level.block.CakeBlock::new);
-    public static int MAX_BITES;
-    public static int ITEM_PER_BITE;
+    public static final MapCodec<CakeBlock> CODEC = simpleCodec(CakeBlock::new);
+    public static final int MAX_BITES = 6;
     public static final IntegerProperty BITES = BlockStateProperties.BITES;
-    public CustomCakeBlock(int maxBites,int itemPerBite) {
-       super(BlockBehaviour.Properties.of()
-               .strength(0.5f)
-               .noOcclusion()
-               .sound(SoundType.WOOL));
-       MAX_BITES = maxBites;
-    }
-
+    // Redstone signal strength for full (uneaten) cake
+    public static final int FULL_CAKE_SIGNAL = getOutputSignal(0);
+    protected static final float f_152744_ = 1.0F;
+    protected static final float f_152745_ = 2.0F;
+    // VoxelShape array representing the physical shape of the cake based on number of bites
+    // These shapes attempt to simulate a round cake being sliced like a pizza (removing radial sections)
+    protected static final VoxelShape[] f_51181_ = new VoxelShape[]{
+            Block.box(1.0, 0.0, 1.0, 15.0, 8.0, 15.0), // full cake
+            Block.box(2.0, 0.0, 1.0, 15.0, 8.0, 14.0), // 1 slice removed
+            Block.box(3.0, 0.0, 2.0, 15.0, 8.0, 14.0), // 2 slices removed
+            Block.box(4.0, 0.0, 3.0, 15.0, 8.0, 13.0), // 3 slices removed
+            Block.box(5.0, 0.0, 4.0, 15.0, 8.0, 12.0), // 4 slices removed
+            Block.box(6.0, 0.0, 5.0, 15.0, 8.0, 11.0), // 5 slices removed
+            Block.box(7.0, 0.0, 6.0, 15.0, 8.0, 10.0)  // last slice remains
+    };
 
     @Override
-    public MapCodec<net.minecraft.world.level.block.CakeBlock> codec() {
+    public MapCodec<CakeBlock> codec() {
         return CODEC;
     }
 
-    public CustomCakeBlock(BlockBehaviour.Properties p_51184_) {
+    public CustomCake(Properties p_51184_) {
         super(p_51184_);
         this.registerDefaultState(this.stateDefinition.any().setValue(BITES, Integer.valueOf(0)));
     }

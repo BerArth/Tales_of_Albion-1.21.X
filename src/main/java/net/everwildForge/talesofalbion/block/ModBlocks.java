@@ -246,8 +246,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUE_BERRY_BUSH = BLOCKS.register("blue_berry_bush",
             () -> new BlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
-    public static final RegistryObject<Block> CUSTOM_CAKE = BLOCKS.register("blue_berry_cake",
-            () -> new CustomCakeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE)));
+    public static final RegistryObject<Block> CUSTOM_CAKE = BLOCKS.register("custom_cake",
+            () -> new CustomCakeBlock(6,1));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
