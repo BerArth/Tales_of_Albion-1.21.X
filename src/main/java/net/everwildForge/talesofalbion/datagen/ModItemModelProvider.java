@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHALK_POWDER.get());
         basicItem(ModItems.DRIED_PEAT.get());
         basicItem(ModItems.BLUE_BERRIES.get());
+        basicItem(ModItems.CUSTOM_CAKE_ITEM.get());
 
         buttonItem(ModBlocks.ALDER_BUTTON, ModBlocks.ALDER_PLANKS);
         buttonItem(ModBlocks.BEECH_BUTTON, ModBlocks.BEECH_PLANKS);

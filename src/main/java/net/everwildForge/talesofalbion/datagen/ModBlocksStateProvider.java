@@ -17,12 +17,21 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Function;
 
+/**
+ * Generates blockstate and model JSON files for custom mod blocks.
+ * This class links logical blocks to their visual representations.
+ */
 public class ModBlocksStateProvider extends BlockStateProvider {
     public ModBlocksStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, TalesofAlbion.MOD_ID, exFileHelper);
     }
 
+    /**
+     * Register all custom block models and states.
+     */
     @Override
+
+    // Basic cube blocks with auto-generated block and item models
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_ORE);

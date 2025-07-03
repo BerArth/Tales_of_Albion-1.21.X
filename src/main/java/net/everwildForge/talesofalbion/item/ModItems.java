@@ -57,10 +57,9 @@ public class ModItems {
     public static final RegistryObject<Item> BADGER_SPAWN_EGG = ITEMS.register("badger_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.BADGER,0xa09784,0x2a2a2a,new Item.Properties()));
 
+    /**Custom cake*/
     public static final RegistryObject<Item> CUSTOM_CAKE_ITEM = ITEMS.register("custom_cake",
-            () -> new BlockItem(ModBlocks.CUSTOM_CAKE.get(), new Item.Properties()));
-
-
+            () -> new BlockItem(ModBlocks.CUSTOM_CAKE.get(), new Item.Properties().food(ModFoodProperties.CUSTOM_CAKE_SLICE)));
 
     public static void register(IEventBus eventBus)
     {

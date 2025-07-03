@@ -17,10 +17,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CandleBlock;
-import net.minecraft.world.level.block.CandleCakeBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -32,21 +29,32 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CustomCakeBlock extends Block {
+/**
+ * CustomCakeBlock extends the default Block class to implement cake behavior:
+ * - Track bites taken with a BITES property.
+ * - Allow placing candles on untouched cake.
+ * - Allow eating slices of cake.
+ * - Provide redstone signal strength based on remaining cake.
+ */
+public class CustomCakeBlock extends CakeBlock {
+    // Used for serialization; refers to base CakeBlock codec
     public static final MapCodec<net.minecraft.world.level.block.CakeBlock> CODEC = simpleCodec(net.minecraft.world.level.block.CakeBlock::new);
     public static final int MAX_BITES = 6;
     public static final IntegerProperty BITES = BlockStateProperties.BITES;
+    // Redstone signal strength for full (uneaten) cake
     public static final int FULL_CAKE_SIGNAL = getOutputSignal(0);
     protected static final float f_152744_ = 1.0F;
     protected static final float f_152745_ = 2.0F;
+    // VoxelShape array representing the physical shape of the cake based on number of bites
+    // These shapes attempt to simulate a round cake being sliced like a pizza (removing radial sections)
     protected static final VoxelShape[] f_51181_ = new VoxelShape[]{
-            Block.box(1.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(3.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(5.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(7.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(9.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(11.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-            Block.box(13.0, 0.0, 1.0, 15.0, 8.0, 15.0)
+            Block.box(1.0, 0.0, 1.0, 15.0, 8.0, 15.0), // full cake
+            Block.box(2.0, 0.0, 1.0, 15.0, 8.0, 14.0), // 1 slice removed
+            Block.box(3.0, 0.0, 2.0, 15.0, 8.0, 14.0), // 2 slices removed
+            Block.box(4.0, 0.0, 3.0, 15.0, 8.0, 13.0), // 3 slices removed
+            Block.box(5.0, 0.0, 4.0, 15.0, 8.0, 12.0), // 4 slices removed
+            Block.box(6.0, 0.0, 5.0, 15.0, 8.0, 11.0), // 5 slices removed
+            Block.box(7.0, 0.0, 6.0, 15.0, 8.0, 10.0)  // last slice remains
     };
 
     @Override
@@ -64,11 +72,16 @@ public class CustomCakeBlock extends Block {
         return f_51181_[pState.getValue(BITES)];
     }
 
+    /**
+     * Handles right-clicking with an item (e.g., candles).
+     * Allows adding a candle if the cake has no bites and the item is a valid candle.
+     */
     @Override
     protected ItemInteractionResult useItemOn(
             ItemStack p_332983_, BlockState p_333266_, Level p_328017_, BlockPos p_332811_, Player p_327926_, InteractionHand p_330281_, BlockHitResult p_332277_
     ) {
         Item item = p_332983_.getItem();
+        // If item is a candle and cake is whole
         if (p_332983_.is(ItemTags.CANDLES) && p_333266_.getValue(BITES) == 0 && Block.byItem(item) instanceof CandleBlock candleblock) {
             p_332983_.consume(1, p_327926_);
             p_328017_.playSound(null, p_332811_, SoundEvents.CAKE_ADD_CANDLE, SoundSource.BLOCKS, 1.0F, 1.0F);
@@ -76,17 +89,15 @@ public class CustomCakeBlock extends Block {
             p_328017_.gameEvent(p_327926_, GameEvent.BLOCK_CHANGE, p_332811_);
             p_327926_.awardStat(Stats.ITEM_USED.get(item));
             return ItemInteractionResult.SUCCESS;
-        } else {
+        } else
+        //If item is a cake slice && BITES > 0 -> add bite, use slice
+        {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState p_331745_, Level p_334119_, BlockPos p_330552_, Player p_332095_, BlockHitResult p_329702_) {
-        /**
-         * If cake in hand && cake not food -> remove n cake from hand and add n to cake block
-         * if anything else but cake -> put n cake in inventory && remove n from cake block
-         * */
         if (p_334119_.isClientSide) {
             if (eat(p_334119_, p_330552_, p_331745_, p_332095_).consumesAction()) {
                 return InteractionResult.SUCCESS;
@@ -118,6 +129,10 @@ public class CustomCakeBlock extends Block {
         }
     }
 
+    /**
+     * Called when the block's neighbor changes.
+     * If the block below is no longer solid, the cake breaks.
+     */
     @Override
     protected BlockState updateShape(BlockState p_51213_, Direction p_51214_, BlockState p_51215_, LevelAccessor p_51216_, BlockPos p_51217_, BlockPos p_51218_) {
         return p_51214_ == Direction.DOWN && !p_51213_.canSurvive(p_51216_, p_51217_)
@@ -135,6 +150,10 @@ public class CustomCakeBlock extends Block {
         pBuilder.add(BITES);
     }
 
+    /**
+     * Converts BITES into a redstone output signal.
+     * Full cake (0 bites) = 14, empty = 0.
+     */
     @Override
     protected int getAnalogOutputSignal(BlockState pBlockState, Level pLevel, BlockPos pPos) {
         return getOutputSignal(pBlockState.getValue(BITES));
